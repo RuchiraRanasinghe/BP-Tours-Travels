@@ -3,24 +3,20 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import VehiclesSection from "@/components/VehiclesSection";
 import BookingForm from "@/components/BookingForm";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import CTASection from "@/components/CTASection";
+import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import FloatingButtons from "@/components/FloatingButtons";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navbar />
       <HeroSection />
       <ServicesSection />
       <VehiclesSection />
       <BookingForm />
-      <WhyChooseUs />
-      <TestimonialsSection />
-      <CTASection />
+      <AboutSection />
       <ContactSection />
       <Footer />
       <FloatingButtons />

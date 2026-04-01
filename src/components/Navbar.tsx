@@ -1,88 +1,59 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/bp-logo.jpg";
 
 const links = [
-  { label: "Services", href: "/services" },
-  { label: "Booking", href: "/booking" },
-  { label: "Contact", href: "/contact" },
+  { label: "Services", href: "#services" },
+  { label: "Fleet", href: "#fleet" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-xl shadow-soft" : "bg-transparent"
-      }`}
-    >
-      <div className="container px-6 flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="BP Tours" className="w-9 h-9 rounded-lg object-cover" />
-          <span className="font-display font-bold text-lg text-foreground tracking-tight">
-            BP Tours
-          </span>
-        </Link>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <div className="container px-6 flex items-center justify-between h-16">
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="BP Tours" className="w-10 h-10 rounded-lg object-cover" />
+          <span className="font-display font-bold text-lg text-foreground">BP Tours</span>
+        </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <Link
-              key={l.label}
-              to={l.href}
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === l.href
-                  ? "text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
+            <a key={l.label} href={l.href} className="text-muted-foreground hover:text-foreground font-medium transition-colors">
               {l.label}
-            </Link>
+            </a>
           ))}
-          <Link
-            to="/booking"
-            className="bg-foreground text-background font-medium px-5 py-2.5 rounded-full text-sm hover:bg-foreground/90 transition-colors"
-          >
+          <a href="#booking" className="bg-gradient-gold text-primary-foreground font-semibold px-5 py-2.5 rounded-xl shadow-gold hover:scale-105 transition-transform text-sm">
             Book Now
-          </Link>
+          </a>
         </div>
 
         {/* Mobile toggle */}
         <button onClick={() => setOpen(!open)} className="md:hidden text-foreground" aria-label="Menu">
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background border-t border-border px-6 pb-6 animate-fade-in">
+        <div className="md:hidden bg-background border-b border-border px-6 pb-6">
           {links.map((l) => (
-            <Link
+            <a
               key={l.label}
-              to={l.href}
+              href={l.href}
               onClick={() => setOpen(false)}
-              className="block py-4 text-foreground font-medium border-b border-border last:border-0 text-sm"
+              className="block py-3 text-foreground font-medium border-b border-border last:border-0"
             >
               {l.label}
-            </Link>
+            </a>
           ))}
-          <Link
-            to="/booking"
-            onClick={() => setOpen(false)}
-            className="block mt-4 text-center bg-foreground text-background font-medium py-3 rounded-full text-sm"
-          >
+          <a href="#booking" onClick={() => setOpen(false)} className="block mt-4 text-center bg-gradient-gold text-primary-foreground font-semibold py-3 rounded-xl shadow-gold">
             Book Now
-          </Link>
+          </a>
         </div>
       )}
     </nav>
