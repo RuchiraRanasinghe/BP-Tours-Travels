@@ -1,59 +1,81 @@
 import { motion } from "framer-motion";
 import carImg from "@/assets/car-service.jpg";
 import vanImg from "@/assets/van-service.jpg";
-import { Users, Briefcase } from "lucide-react";
+import { Users, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const vehicles = [
   {
     name: "Premium Car",
     image: carImg,
-    passengers: "1–4 Passengers",
-    ideal: "Airport transfers, city rides",
-    icon: Briefcase,
+    passengers: "1–4 passengers",
+    features: ["Airport transfers", "City rides", "AC & comfortable"],
   },
   {
     name: "Spacious Van",
     image: vanImg,
-    passengers: "5–12 Passengers",
-    ideal: "Group tours, family travel",
-    icon: Users,
+    passengers: "5–12 passengers",
+    features: ["Group tours", "Family travel", "Extra luggage space"],
   },
 ];
 
 const VehiclesSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-cream">
+    <section className="py-24 md:py-32 bg-gradient-subtle">
       <div className="container px-6">
         <motion.div
-          className="text-center mb-16"
+          className="max-w-xl mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-            Our <span className="text-gradient-gold">Fleet</span>
+          <p className="text-sm font-medium text-gold mb-3 tracking-wide uppercase">Our Fleet</p>
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground leading-tight mb-4">
+            Choose your ride
           </h2>
-          <p className="text-muted-foreground text-lg">Choose the vehicle that fits your journey.</p>
+          <p className="text-muted-foreground text-lg">
+            Well-maintained vehicles for every journey size.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl">
           {vehicles.map((v, i) => (
             <motion.div
               key={v.name}
-              className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-gold transition-shadow"
+              className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-soft transition-all duration-300 group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
+              transition={{ delay: i * 0.12 }}
             >
-              <img src={v.image} alt={v.name} className="w-full h-56 object-cover" />
-              <div className="p-6">
-                <h3 className="text-2xl font-display font-bold text-foreground mb-2">{v.name}</h3>
-                <div className="flex items-center gap-2 text-muted-foreground mb-1">
-                  <v.icon className="w-4 h-4 text-gold" />
-                  <span>{v.passengers}</span>
+              <div className="relative overflow-hidden">
+                <img
+                  src={v.image}
+                  alt={v.name}
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-2xl font-display font-bold text-foreground">{v.name}</h3>
+                  <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                    <Users className="w-4 h-4" />
+                    {v.passengers}
+                  </div>
                 </div>
-                <p className="text-muted-foreground">Ideal for: {v.ideal}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {v.features.map((f) => (
+                    <span key={f} className="text-xs font-medium text-muted-foreground bg-secondary px-3 py-1.5 rounded-full">
+                      {f}
+                    </span>
+                  ))}
+                </div>
+                <Link
+                  to="/booking"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-gold transition-colors"
+                >
+                  Book this vehicle <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </motion.div>
           ))}

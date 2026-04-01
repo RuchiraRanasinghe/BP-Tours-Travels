@@ -9,13 +9,13 @@ export default {
       center: true,
       padding: "1.5rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1200px",
       },
     },
     extend: {
       fontFamily: {
         display: ["Playfair Display", "serif"],
-        body: ["DM Sans", "sans-serif"],
+        body: ["Inter", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -56,7 +56,10 @@ export default {
           light: "hsl(var(--gold-light))",
           dark: "hsl(var(--gold-dark))",
         },
-        cream: "hsl(var(--cream))",
+        sky: {
+          DEFAULT: "hsl(var(--sky))",
+          light: "hsl(var(--sky-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -83,7 +86,7 @@ export default {
           to: { height: "0" },
         },
         "fade-up": {
-          from: { opacity: "0", transform: "translateY(30px)" },
+          from: { opacity: "0", transform: "translateY(20px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
         "fade-in": {
