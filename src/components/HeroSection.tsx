@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const scrollToBooking = () => {
@@ -7,23 +8,16 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-accent/5 blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/3 blur-[120px]" />
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={heroBg} alt="Scenic coastal road" className="w-full h-full object-cover" width={1920} height={1080} />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
       </div>
-
-      {/* Grid pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(hsl(0 0% 100%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100%) 1px, transparent 1px)`,
-        backgroundSize: '80px 80px'
-      }} />
 
       <div className="relative z-10 container text-center px-6 py-20">
         <motion.div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm mb-8"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -44,7 +38,7 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          className="text-primary-foreground/60 text-lg md:text-xl max-w-xl mx-auto mb-10 font-body leading-relaxed"
+          className="text-primary-foreground/70 text-lg md:text-xl max-w-xl mx-auto mb-10 font-body leading-relaxed"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
@@ -69,7 +63,7 @@ const HeroSection = () => {
             href="https://wa.me/94771399144"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-primary-foreground/20 text-primary-foreground font-semibold px-10 py-4 rounded-2xl text-lg hover:bg-primary-foreground/5 transition-colors"
+            className="border border-primary-foreground/20 text-primary-foreground font-semibold px-10 py-4 rounded-2xl text-lg hover:bg-primary-foreground/10 backdrop-blur-sm transition-colors"
           >
             WhatsApp Us
           </a>
