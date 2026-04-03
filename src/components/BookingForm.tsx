@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
+import { Send } from "lucide-react";
 
 type ServiceType = "airport-pickup" | "airport-drop" | "local-ride" | "custom-tour";
 type VehicleType = "car" | "van";
@@ -29,7 +30,7 @@ const BookingForm = () => {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition";
+    "w-full px-4 py-3.5 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-sm";
 
   return (
     <section id="booking" className="py-20 md:py-28 bg-background">
@@ -48,7 +49,7 @@ const BookingForm = () => {
 
         <motion.form
           onSubmit={handleSubmit}
-          className="max-w-2xl mx-auto bg-card rounded-2xl border border-border p-6 md:p-10 shadow-sm"
+          className="max-w-2xl mx-auto bg-card rounded-2xl border border-border p-6 md:p-10 shadow-card"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -78,7 +79,7 @@ const BookingForm = () => {
             <input required placeholder="Drop Location" value={form.drop} onChange={(e) => update("drop", e.target.value)} className={inputClass} />
           </div>
 
-          <div className="grid grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-3 gap-4 mb-8">
             <input required type="date" value={form.date} onChange={(e) => update("date", e.target.value)} className={inputClass} />
             <input required type="time" value={form.time} onChange={(e) => update("time", e.target.value)} className={inputClass} />
             <input type="number" min="1" max="15" placeholder="Pax" value={form.passengers} onChange={(e) => update("passengers", e.target.value)} className={inputClass} />
@@ -86,8 +87,9 @@ const BookingForm = () => {
 
           <button
             type="submit"
-            className="w-full bg-gradient-gold text-primary-foreground font-semibold py-4 rounded-xl text-lg shadow-gold hover:scale-[1.02] transition-transform"
+            className="w-full bg-gradient-gold text-primary-foreground font-semibold py-4 rounded-xl text-lg shadow-gold hover:scale-[1.02] transition-transform flex items-center justify-center gap-2"
           >
+            <Send className="w-5 h-5" />
             Send Booking via WhatsApp
           </button>
         </motion.form>

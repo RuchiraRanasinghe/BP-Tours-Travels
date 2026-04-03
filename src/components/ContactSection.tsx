@@ -20,41 +20,47 @@ const ContactSection = () => {
         <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
           <motion.a
             href="tel:+94707399144"
-            className="bg-card rounded-2xl border border-border p-8 text-center hover:shadow-gold hover:border-gold/30 transition-all group"
+            className="bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-gold hover:border-primary/20 transition-all group"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Phone className="w-10 h-10 text-gold mx-auto mb-4 group-hover:scale-110 transition-transform" />
+            <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <Phone className="w-7 h-7 text-primary-foreground" />
+            </div>
             <p className="font-semibold text-foreground text-lg">Call Us</p>
-            <p className="text-muted-foreground">070 739 9144</p>
+            <p className="text-muted-foreground text-sm mt-1">070 739 9144</p>
           </motion.a>
 
           <motion.a
             href="https://wa.me/94771399144"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-card rounded-2xl border border-border p-8 text-center hover:shadow-gold hover:border-gold/30 transition-all group"
+            className="bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-gold hover:border-primary/20 transition-all group"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <MessageCircle className="w-10 h-10 text-gold mx-auto mb-4 group-hover:scale-110 transition-transform" />
+            <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <MessageCircle className="w-7 h-7 text-primary-foreground" />
+            </div>
             <p className="font-semibold text-foreground text-lg">WhatsApp</p>
-            <p className="text-muted-foreground">077 139 9144</p>
+            <p className="text-muted-foreground text-sm mt-1">077 139 9144</p>
           </motion.a>
 
           <motion.div
-            className="bg-card rounded-2xl border border-border p-8 text-center"
+            className="bg-card rounded-2xl border border-border p-8 text-center shadow-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <MapPin className="w-10 h-10 text-gold mx-auto mb-4" />
+            <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mx-auto mb-4">
+              <MapPin className="w-7 h-7 text-primary-foreground" />
+            </div>
             <p className="font-semibold text-foreground text-lg">Location</p>
-            <p className="text-muted-foreground">Sri Lanka</p>
+            <p className="text-muted-foreground text-sm mt-1">Sri Lanka</p>
           </motion.div>
         </div>
       </div>
