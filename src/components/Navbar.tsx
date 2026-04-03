@@ -66,12 +66,7 @@ const Navbar = () => {
           >
             Contact
           </a>
-          <a
-            href="#booking"
-            className="bg-gradient-gold text-primary-foreground font-semibold px-6 py-2.5 rounded-full text-sm shadow-gold hover:scale-105 active:scale-95 transition-transform duration-300"
-          >
-            Book Now
-          </a>
+         
         </div>
 
         {/* Mobile toggle */}
@@ -97,13 +92,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a
-            href="#booking"
-            onClick={() => setOpen(false)}
-            className="block mt-4 text-center bg-gradient-gold text-primary-foreground font-semibold py-3.5 rounded-full shadow-gold hover:scale-105 active:scale-95 transition-transform duration-300"
-          >
-            Book Now
-          </a>
+         
         </div>
       )}
     </nav>
