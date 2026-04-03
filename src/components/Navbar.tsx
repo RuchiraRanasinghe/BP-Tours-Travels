@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Car } from "lucide-react";
+import NavbarMegaMenu from "@/components/MegaMenu";
 
 const links = [
   { label: "Home", href: "#" },
   { label: "Services", href: "#services" },
+  { label: "Fleet", href: "#fleet" },
   { label: "Corporate Transport", href: "#corporate-transport" },
   { label: "Rate Chart", href: "#rate-chart" },
   { label: "About", href: "#about" },
@@ -40,29 +42,9 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop center navigation */}
+        {/* Desktop mega menu */}
         <div className="hidden md:flex flex-1 items-center justify-center">
-          <div
-            className={`inline-flex items-center rounded-full border px-2 py-1.5 backdrop-blur-xl transition-all duration-300 ${
-              scrolled
-                ? "border-border/80 bg-background/90 shadow-[0_10px_30px_rgba(15,23,42,0.12)]"
-                : "border-white/25 bg-background/20 shadow-[0_10px_30px_rgba(15,23,42,0.1)]"
-            }`}
-          >
-            {links.map((l) => (
-              <a
-                key={l.label}
-                href={l.href}
-                className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-0.5 after:origin-center after:scale-x-0 after:rounded-full after:bg-gradient-blue after:transition-transform hover:after:scale-x-100 ${
-                  scrolled
-                    ? "text-muted-foreground hover:text-foreground"
-                    : "text-primary-foreground/75 hover:text-primary-foreground"
-                }`}
-              >
-                {l.label}
-              </a>
-            ))}
-          </div>
+          <NavbarMegaMenu scrolled={scrolled} />
         </div>
 
         {/* Right-aligned CTA */}

@@ -296,25 +296,17 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
   };
 
   return (
-    <div className="hidden md:flex items-center justify-center gap-0">
-      <div
-        className={`flex items-center justify-center gap-0 rounded-full px-1 py-1.5 transition-all ${
-          scrolled
-            ? "bg-card/90 backdrop-blur-xl ring-1 ring-border shadow-card"
-            : "bg-black/20 backdrop-blur-md ring-1 ring-white/10"
-        }`}
-      >
-        <MegaMenuItem label="Services" sections={menuStructure.services} scrolled={scrolled} />
-        <MegaMenuItem label="Fleet" sections={menuStructure.fleet} scrolled={scrolled} />
-        <MegaMenuItem label="About" sections={menuStructure.about} scrolled={scrolled} />
-        <MegaMenuItem label="Contact" sections={menuStructure.contact} scrolled={scrolled} />
-      </div>
-      <a
-        href="#booking"
-        className="bg-gradient-blue text-primary-foreground font-semibold px-6 py-2.5 rounded-lg shadow-blue hover:shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap ml-4"
-      >
-        Book Now
-      </a>
+    <div
+      className={`inline-flex items-center rounded-full border px-2 py-1.5 backdrop-blur-xl transition-all duration-300 ${
+        scrolled
+          ? "border-border/80 bg-background/90 shadow-[0_10px_30px_rgba(15,23,42,0.12)]"
+          : "border-white/25 bg-background/20 shadow-[0_10px_30px_rgba(15,23,42,0.1)]"
+      }`}
+    >
+      <MegaMenuItem label="Services" sections={menuStructure.services} scrolled={scrolled} />
+      <MegaMenuItem label="Fleet" sections={menuStructure.fleet} scrolled={scrolled} />
+      <MegaMenuItem label="About" sections={menuStructure.about} scrolled={scrolled} />
+      <MegaMenuItem label="Contact" sections={menuStructure.contact} scrolled={scrolled} />
     </div>
   );
 };
