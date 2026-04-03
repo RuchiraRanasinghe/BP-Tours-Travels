@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <div className="container px-6 flex items-center h-16 gap-4 md:gap-8">
         <a href="#" className="flex items-center gap-2.5 flex-shrink-0">
-          <div className="w-9 h-9 rounded-xl bg-gradient-gold flex items-center justify-center shadow-gold">
+          <div className="w-9 h-9 rounded-xl bg-gradient-blue flex items-center justify-center shadow-blue">
             <Car className="w-5 h-5 text-primary-foreground" />
           </div>
           <span
@@ -46,7 +46,7 @@ const Navbar = () => {
             <a
               key={l.label}
               href={l.href}
-              className={`relative font-medium transition-colors text-sm px-1 py-2 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:rounded-full after:bg-gradient-gold after:transition-transform hover:after:scale-x-100 ${
+              className={`relative font-medium transition-colors text-sm px-1 py-2 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:rounded-full after:bg-gradient-blue after:transition-transform hover:after:scale-x-100 ${
                 scrolled
                   ? "text-muted-foreground hover:text-foreground"
                   : "text-primary-foreground/75 hover:text-primary-foreground"
@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center flex-shrink-0">
           <a
             href="#booking"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-gold px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-gold transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-blue px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-blue transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
           >
             Book Now
           </a>
@@ -93,7 +93,7 @@ const Navbar = () => {
           <a
             href="#booking"
             onClick={() => setOpen(false)}
-            className="block mt-4 text-center bg-gradient-gold text-primary-foreground font-semibold py-3.5 rounded-full shadow-gold transition-transform duration-300 hover:scale-105 active:scale-95"
+            className="block mt-4 text-center bg-gradient-blue text-primary-foreground font-semibold py-3.5 rounded-full shadow-blue transition-transform duration-300 hover:scale-105 active:scale-95"
           >
             Book Now
           </a>

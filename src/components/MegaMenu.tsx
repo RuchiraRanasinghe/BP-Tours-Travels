@@ -311,7 +311,7 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
       </div>
       <a
         href="#booking"
-        className="bg-gradient-gold text-primary-foreground font-semibold px-6 py-2.5 rounded-lg shadow-gold hover:shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap ml-4"
+        className="bg-gradient-blue text-primary-foreground font-semibold px-6 py-2.5 rounded-lg shadow-blue hover:shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap ml-4"
       >
         Book Now
       </a>

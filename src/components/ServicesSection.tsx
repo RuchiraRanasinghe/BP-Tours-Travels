@@ -66,7 +66,7 @@ const ServicesSection = () => {
               variants={fadeUp}
               custom={i + 1}
             >
-              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-gradient-gold group-hover:scale-110 transition-all duration-300">
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-gradient-blue group-hover:scale-110 transition-all duration-300">
                 <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
               <h3 className="text-xl font-display font-semibold text-foreground mb-3 text-center">

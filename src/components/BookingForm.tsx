@@ -39,7 +39,7 @@ const BookingForm = () => {
   const labelClass = "block text-sm font-medium text-foreground mb-1.5";
 
   return (
-    <section id="booking" className="py-24 md:py-32 bg-cream">
+    <section id="booking" className="py-24 md:py-32 bg-surface-alt">
       <div className="container px-6">
         <motion.div
           className="text-center mb-12"
@@ -126,7 +126,7 @@ const BookingForm = () => {
 
           <button
             type="submit"
-            className="w-full bg-gradient-gold text-primary-foreground font-semibold py-4 rounded-full text-lg shadow-gold hover:scale-105 active:scale-95 transition-transform duration-300 flex items-center justify-center gap-2.5"
+            className="w-full bg-gradient-blue text-primary-foreground font-semibold py-4 rounded-full text-lg shadow-blue hover:scale-105 active:scale-95 transition-transform duration-300 flex items-center justify-center gap-2.5"
           >
             <Send className="w-5 h-5" />
             Send Booking via WhatsApp

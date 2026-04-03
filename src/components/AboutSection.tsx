@@ -51,7 +51,7 @@ const AboutSection = () => {
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
                 <h.icon className="w-7 h-7 text-primary" />
               </div>
-              <p className="text-4xl font-display font-bold text-gradient-gold mb-1">{h.stat}</p>
+              <p className="text-4xl font-display font-bold text-gradient-blue mb-1">{h.stat}</p>
               <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-5">{h.statLabel}</p>
               <h3 className="text-lg font-display font-semibold text-foreground mb-2">{h.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{h.desc}</p>

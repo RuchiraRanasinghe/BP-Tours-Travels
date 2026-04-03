@@ -39,7 +39,7 @@ const ContactSection = () => {
             variants={fadeUp}
             custom={1}
           >
-            <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-gold group-hover:scale-110 transition-all duration-300">
+            <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-blue group-hover:scale-110 transition-all duration-300">
               <Phone className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
             </div>
             <p className="font-semibold text-foreground text-lg">Call Us</p>
@@ -57,7 +57,7 @@ const ContactSection = () => {
             variants={fadeUp}
             custom={2}
           >
-            <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-gold group-hover:scale-110 transition-all duration-300">
+            <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-blue group-hover:scale-110 transition-all duration-300">
               <MessageCircle className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
             </div>
             <p className="font-semibold text-foreground text-lg">WhatsApp</p>

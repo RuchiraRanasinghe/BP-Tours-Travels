@@ -33,7 +33,7 @@ const fadeUp = {
 
 const VehiclesSection = () => {
   return (
-    <section id="fleet" className="py-24 md:py-32 bg-cream">
+    <section id="fleet" className="py-24 md:py-32 bg-surface">
       <div className="container px-6">
         <motion.div
           className="text-center mb-16"
@@ -90,7 +90,7 @@ const VehiclesSection = () => {
                 </div>
                 <a
                   href="#booking"
-                  className="inline-flex items-center justify-center gap-2 w-full bg-gradient-gold text-primary-foreground font-semibold px-6 py-3 rounded-full text-sm shadow-gold hover:scale-105 active:scale-95 transition-transform duration-300"
+                  className="inline-flex items-center justify-center gap-2 w-full bg-gradient-blue text-primary-foreground font-semibold px-6 py-3 rounded-full text-sm shadow-blue hover:scale-105 active:scale-95 transition-transform duration-300"
                 >
                   Book This Vehicle <ArrowRight className="w-4 h-4" />
                 </a>

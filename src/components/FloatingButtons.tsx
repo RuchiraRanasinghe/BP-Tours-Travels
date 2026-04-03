@@ -7,7 +7,7 @@ const FloatingButtons = () => {
       <div className="fixed left-4 bottom-24 md:bottom-6 z-50 flex flex-col gap-3">
         <a
           href="tel:+94707399144"
-          className="w-14 h-14 rounded-full bg-gradient-gold text-primary-foreground flex items-center justify-center shadow-gold hover:scale-125 active:scale-100 transition-transform duration-300"
+          className="w-14 h-14 rounded-full bg-gradient-blue text-primary-foreground flex items-center justify-center shadow-blue hover:scale-125 active:scale-100 transition-transform duration-300"
           aria-label="Call us"
           title="Call us"
         >
@@ -25,16 +25,6 @@ const FloatingButtons = () => {
         </a>
       </div>
 
-      {/* Center - Book Now */}
-      <div className="fixed inset-x-0 bottom-24 md:bottom-6 z-50 flex justify-center items-center pointer-events-none">
-        <a
-          href="#booking"
-          className="bg-gradient-gold text-primary-foreground font-semibold px-6 py-3 rounded-full shadow-gold hover:scale-110 active:scale-95 transition-transform duration-300 pointer-events-auto"
-          title="Book Now"
-        >
-          Book Now
-        </a>
-      </div>
     </>
   );
 };
