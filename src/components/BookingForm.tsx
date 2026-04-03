@@ -126,7 +126,7 @@ const BookingForm = () => {
 
           <button
             type="submit"
-            className="w-full bg-gradient-gold text-primary-foreground font-semibold py-4 rounded-full text-lg shadow-gold hover:scale-[1.02] active:scale-100 transition-transform flex items-center justify-center gap-2.5"
+            className="w-full bg-gradient-gold text-primary-foreground font-semibold py-4 rounded-full text-lg shadow-gold hover:scale-105 active:scale-95 transition-transform duration-300 flex items-center justify-center gap-2.5"
           >
             <Send className="w-5 h-5" />
             Send Booking via WhatsApp

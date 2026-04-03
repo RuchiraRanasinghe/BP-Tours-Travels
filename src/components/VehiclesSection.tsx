@@ -61,17 +61,18 @@ const VehiclesSection = () => {
               variants={fadeUp}
               custom={i + 1}
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden bg-muted">
                 <img
                   src={v.image}
                   alt={v.name}
                   loading="lazy"
                   width={960}
                   height={640}
-                  className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-700 cursor-pointer"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-foreground/80 text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full">
+                  <span className="bg-foreground/80 text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
                     {v.passengers}
                   </span>
                 </div>
@@ -89,7 +90,7 @@ const VehiclesSection = () => {
                 </div>
                 <a
                   href="#booking"
-                  className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-semibold px-6 py-3 rounded-full text-sm shadow-gold hover:scale-105 active:scale-100 transition-transform"
+                  className="inline-flex items-center justify-center gap-2 w-full bg-gradient-gold text-primary-foreground font-semibold px-6 py-3 rounded-full text-sm shadow-gold hover:scale-105 active:scale-95 transition-transform duration-300"
                 >
                   Book This Vehicle <ArrowRight className="w-4 h-4" />
                 </a>

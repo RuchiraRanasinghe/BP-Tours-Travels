@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Car } from "lucide-react";
+import NavbarMegaMenu from "./MegaMenu";
 
-const links = [
+const mobileLinks = [
   { label: "Services", href: "#services" },
   { label: "Fleet", href: "#fleet" },
   { label: "About", href: "#about" },
@@ -26,10 +27,11 @@ const Navbar = () => {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="flex h-16 w-full items-center justify-between px-4 py-4 sm:px-6 lg:px-10">
+      <div className="flex h-16 w-full items-center px-4 py-4 sm:px-6 lg:px-10">
+        {/* Left - Logo */}
         <a
           href="#"
-          className={`flex items-center gap-3 rounded-full px-3.5 py-2 transition-all ${
+          className={`flex items-center gap-3 rounded-full px-3.5 py-2 transition-all flex-shrink-0 ${
             scrolled
               ? "bg-card/90 text-foreground ring-1 ring-border shadow-card"
               : "bg-black/20 text-primary-foreground ring-1 ring-white/10 backdrop-blur-md"
@@ -39,7 +41,7 @@ const Navbar = () => {
             <Car className="w-5 h-5 text-primary-foreground" />
           </div>
           <span
-            className={`font-display font-bold text-lg tracking-tight transition-colors ${
+            className={`font-display font-bold text-lg tracking-tight transition-colors hidden sm:inline ${
               scrolled ? "text-foreground" : "text-primary-foreground"
             }`}
           >
@@ -47,30 +49,26 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop */}
-        <div
-          className={`hidden md:flex items-center gap-2 rounded-full px-2.5 py-2 transition-all ${
-            scrolled
-              ? "bg-card/90 backdrop-blur-xl ring-1 ring-border shadow-card"
-              : "bg-black/20 backdrop-blur-md ring-1 ring-white/10"
-          }`}
-        >
-          {links.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              className={`rounded-full px-4 py-2 font-medium transition-colors text-sm ${
-                scrolled
-                  ? "text-muted-foreground hover:text-foreground hover:bg-muted"
-                  : "text-primary-foreground/75 hover:text-primary-foreground hover:bg-white/10"
-              }`}
-            >
-              {l.label}
-            </a>
-          ))}
+        {/* Center - Desktop Navigation Menu */}
+        <div className="hidden md:flex flex-1 items-center justify-center">
+          <NavbarMegaMenu scrolled={scrolled} />
+        </div>
+
+        {/* Right - Contact & Book Button */}
+        <div className="hidden md:flex items-center gap-4 ml-auto flex-shrink-0">
+          <a
+            href="#contact"
+            className={`text-sm font-medium transition-colors ${
+              scrolled
+                ? "text-muted-foreground hover:text-foreground"
+                : "text-primary-foreground/75 hover:text-primary-foreground"
+            }`}
+          >
+            Contact
+          </a>
           <a
             href="#booking"
-            className="bg-gradient-gold text-primary-foreground font-semibold px-5 py-2.5 rounded-full shadow-gold hover:scale-105 transition-transform text-sm ml-2"
+            className="bg-gradient-gold text-primary-foreground font-semibold px-6 py-2.5 rounded-full text-sm shadow-gold hover:scale-105 active:scale-95 transition-transform duration-300"
           >
             Book Now
           </a>
@@ -79,7 +77,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className={`md:hidden transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+          className={`md:hidden ml-auto transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
           aria-label="Menu"
         >
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -89,7 +87,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden w-full bg-background/95 backdrop-blur-xl border-b border-border px-4 sm:px-6 pb-6 shadow-card">
-          {links.map((l) => (
+          {mobileLinks.map((l) => (
             <a
               key={l.label}
               href={l.href}
@@ -102,7 +100,7 @@ const Navbar = () => {
           <a
             href="#booking"
             onClick={() => setOpen(false)}
-            className="block mt-4 text-center bg-gradient-gold text-primary-foreground font-semibold py-3.5 rounded-full shadow-gold"
+            className="block mt-4 text-center bg-gradient-gold text-primary-foreground font-semibold py-3.5 rounded-full shadow-gold hover:scale-105 active:scale-95 transition-transform duration-300"
           >
             Book Now
           </a>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.svg";
 
 const HeroSection = () => {
   const scrollToBooking = () => {
@@ -11,7 +11,7 @@ const HeroSection = () => {
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="Scenic coastal road in Sri Lanka" className="w-full h-full object-cover" width={1920} height={1080} />
+        <img src={heroBg} alt="Bandaranaike International Airport with Sri Lankan travel scene" className="w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/75 via-foreground/55 to-foreground/85" />
       </div>
 
@@ -47,14 +47,14 @@ const HeroSection = () => {
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <button
             onClick={scrollToBooking}
-            className="bg-gradient-gold text-primary-foreground font-semibold px-10 py-4 rounded-full text-lg shadow-gold hover:scale-105 active:scale-100 transition-transform"
+            className="bg-gradient-gold text-primary-foreground font-semibold px-10 py-4 rounded-full text-lg shadow-gold hover:scale-110 active:scale-95 transition-transform duration-300"
           >
             Book Your Ride
           </button>
@@ -62,7 +62,7 @@ const HeroSection = () => {
             href="https://wa.me/94771399144"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-primary-foreground/20 text-primary-foreground font-semibold px-10 py-4 rounded-full text-lg hover:border-primary-foreground/40 transition-colors"
+            className="border-2 border-primary-foreground/20 text-primary-foreground font-semibold px-10 py-4 rounded-full text-lg hover:border-primary-foreground/40 hover:bg-primary-foreground/5 transition-all duration-300"
           >
             WhatsApp Us
           </a>

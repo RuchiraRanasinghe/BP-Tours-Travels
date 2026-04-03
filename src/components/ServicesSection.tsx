@@ -59,23 +59,23 @@ const ServicesSection = () => {
             <motion.a
               href="#booking"
               key={service.title}
-              className="group bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 block"
+              className="group bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 block flex flex-col"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
               variants={fadeUp}
               custom={i + 1}
             >
-              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-gradient-gold group-hover:scale-105 transition-all duration-300">
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-gradient-gold group-hover:scale-110 transition-all duration-300">
                 <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
-              <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-display font-semibold text-foreground mb-3 text-center">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-sm mb-5">
+              <p className="text-muted-foreground leading-relaxed text-sm mb-5 text-center flex-grow">
                 {service.description}
               </p>
-              <span className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
+              <span className="flex items-center justify-center gap-1.5 text-primary font-semibold text-sm group-hover:gap-3 transition-all mt-auto">
                 Book Now <ArrowRight className="w-4 h-4" />
               </span>
             </motion.a>
