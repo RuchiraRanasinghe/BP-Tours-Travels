@@ -35,7 +35,7 @@ const HeroSection = () => {
             >
               Premium Travel
               <br />
-              <span className="text-gradient-blue">with Comfort</span>
+              <span className="text-gradient-hero">with Comfort</span>
             </motion.h1>
 
             <motion.p
@@ -87,15 +87,18 @@ const HeroSection = () => {
             transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
           >
             <div className="absolute -inset-4 rounded-[2rem] bg-primary/15 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-primary-foreground/10 shadow-2xl">
-              <img
-                src={heroBg}
-                alt="Premium travel in Sri Lanka"
-                width={1280}
-                height={960}
-                className="h-[420px] w-full object-cover md:h-[540px]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/45 via-transparent to-transparent" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/25 bg-[#f8fafc] shadow-2xl">
+              <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-white/95 via-white/55 to-transparent" />
+              <div className="relative px-4 pb-4 pt-20 md:px-6 md:pb-6 md:pt-24">
+                <img
+                  src={heroBg}
+                  alt="Premium travel in Sri Lanka"
+                  width={1280}
+                  height={960}
+                  className="h-[320px] w-full object-contain object-center md:h-[420px]"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent" />
 
               <div className="absolute left-4 top-4 flex flex-col gap-3 md:left-6 md:top-6">
                 <div className="inline-flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-sm font-semibold text-foreground shadow-lg backdrop-blur">
@@ -109,7 +112,7 @@ const HeroSection = () => {
               </div>
 
               <div className="absolute bottom-4 left-4 right-4 grid gap-3 md:bottom-6 md:left-6 md:right-6 sm:grid-cols-2">
-                <div className="rounded-2xl bg-background/90 p-4 shadow-lg backdrop-blur">
+                <div className="rounded-2xl border border-white/70 bg-white/92 p-4 shadow-lg backdrop-blur">
                   <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
                     <Sparkles className="h-4 w-4 text-primary" />
                     Premium comfort
@@ -118,7 +121,7 @@ const HeroSection = () => {
                     Clean cars, friendly drivers, and scenic island travel.
                   </p>
                 </div>
-                <div className="rounded-2xl bg-foreground/90 p-4 shadow-lg backdrop-blur">
+                <div className="rounded-2xl bg-foreground/92 p-4 shadow-lg backdrop-blur">
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
                     Available 24/7
                   </p>

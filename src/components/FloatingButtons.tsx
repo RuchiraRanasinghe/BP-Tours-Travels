@@ -17,11 +17,11 @@ const FloatingButtons = () => {
           href="https://wa.me/94771399144"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-14 h-14 rounded-full bg-[hsl(var(--green))] text-primary-foreground flex items-center justify-center shadow-lg hover:scale-125 active:scale-100 transition-transform duration-300"
+          className="w-14 h-14 rounded-full bg-white text-primary flex items-center justify-center shadow-lg hover:scale-125 active:scale-100 transition-transform duration-300 border border-border/70"
           aria-label="WhatsApp us"
           title="WhatsApp us"
         >
-          <MessageCircle className="w-6 h-6" />
+          <MessageCircle className="w-6 h-6 text-blue-700" />
         </a>
       </div>
 

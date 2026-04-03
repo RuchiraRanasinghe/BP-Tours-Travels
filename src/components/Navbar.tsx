@@ -20,13 +20,15 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-border/70 shadow-card"
-          : "bg-transparent border-b border-transparent"
-      }`}
+      className="fixed top-3 left-0 right-0 z-50 px-3 md:px-6"
     >
-      <div className="container px-6 flex items-center h-16 gap-4 md:gap-8">
+      <div
+        className={`mx-auto flex h-16 max-w-7xl items-center gap-4 rounded-[1.5rem] border transition-all duration-300 md:gap-8 md:rounded-full md:px-6 ${
+          scrolled
+            ? "border-border/70 bg-background/92 shadow-[0_18px_50px_rgba(15,23,42,0.14)] backdrop-blur-xl"
+            : "border-white/20 bg-background/72 shadow-[0_18px_50px_rgba(15,23,42,0.1)] backdrop-blur-xl"
+        }`}
+      >
         <a href="#" className="flex items-center gap-2.5 flex-shrink-0">
           <div className="w-9 h-9 rounded-xl bg-gradient-blue flex items-center justify-center shadow-blue">
             <Car className="w-5 h-5 text-primary-foreground" />
@@ -79,7 +81,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border px-6 pb-6 shadow-card">
+        <div className="md:hidden mt-3 rounded-[1.5rem] border border-border bg-background/96 px-6 pb-6 shadow-card backdrop-blur-xl">
           {links.map((l) => (
             <a
               key={l.label}

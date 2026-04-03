@@ -106,6 +106,11 @@
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(var(--blue-dark)), hsl(var(--blue)), hsl(var(--blue-light)));
   }
+  .text-gradient-hero {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(0 0% 100%), hsl(var(--blue-light)) 48%, hsl(var(--blue)));
+    filter: drop-shadow(0 10px 18px hsl(var(--ink) / 0.5));
+  }
   .bg-gradient-blue {
     background-image: linear-gradient(135deg, hsl(var(--blue-dark)), hsl(var(--blue)) 52%, hsl(var(--blue-light)));
   }
