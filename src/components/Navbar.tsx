@@ -20,14 +20,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-3 left-0 right-0 z-50 px-3 md:px-6"
+      className="fixed top-3 left-0 right-0 z-50"
     >
       <div
-        className={`mx-auto flex h-16 max-w-7xl items-center gap-4 rounded-[1.5rem] border transition-all duration-300 md:gap-8 md:rounded-full md:px-6 ${
-          scrolled
-            ? "border-border/70 bg-background/92 shadow-[0_18px_50px_rgba(15,23,42,0.14)] backdrop-blur-xl"
-            : "border-white/20 bg-background/72 shadow-[0_18px_50px_rgba(15,23,42,0.1)] backdrop-blur-xl"
-        }`}
+        className="container flex h-16 items-center gap-4 px-6 md:gap-8"
       >
         <a href="#" className="flex items-center gap-2.5 flex-shrink-0">
           <div className="w-9 h-9 rounded-xl bg-gradient-blue flex items-center justify-center shadow-blue">
@@ -43,20 +39,28 @@ const Navbar = () => {
         </a>
 
         {/* Desktop center navigation */}
-        <div className="hidden md:flex flex-1 items-center justify-center gap-8">
-          {links.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              className={`relative font-medium transition-colors text-sm px-1 py-2 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:rounded-full after:bg-gradient-blue after:transition-transform hover:after:scale-x-100 ${
-                scrolled
-                  ? "text-muted-foreground hover:text-foreground"
-                  : "text-primary-foreground/75 hover:text-primary-foreground"
-              }`}
-            >
-              {l.label}
-            </a>
-          ))}
+        <div className="hidden md:flex flex-1 items-center justify-center">
+          <div
+            className={`inline-flex items-center rounded-full border px-2 py-1.5 backdrop-blur-xl transition-all duration-300 ${
+              scrolled
+                ? "border-border/80 bg-background/90 shadow-[0_10px_30px_rgba(15,23,42,0.12)]"
+                : "border-white/25 bg-background/20 shadow-[0_10px_30px_rgba(15,23,42,0.1)]"
+            }`}
+          >
+            {links.map((l) => (
+              <a
+                key={l.label}
+                href={l.href}
+                className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-0.5 after:origin-center after:scale-x-0 after:rounded-full after:bg-gradient-blue after:transition-transform hover:after:scale-x-100 ${
+                  scrolled
+                    ? "text-muted-foreground hover:text-foreground"
+                    : "text-primary-foreground/75 hover:text-primary-foreground"
+                }`}
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Right-aligned CTA */}
