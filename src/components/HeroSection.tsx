@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, MapPin, ShieldCheck, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroMainBg from "@/assets/Gemini_Generated_Image_k6w2u2k6w2u2k6w2.png";
 
@@ -61,13 +62,20 @@ const HeroSection = () => {
                 Book Now
               </button>
               <a
-                href="https://wa.me/94771399144"
+                href="https://wa.me/94707290144"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-primary-foreground/20 text-primary-foreground font-semibold px-10 py-4 rounded-full text-lg hover:border-primary-foreground/40 hover:bg-primary-foreground/5 transition-all duration-300"
               >
                 WhatsApp Us
               </a>
+
+              <Link
+                to="/admin"
+                className="border-2 border-primary-foreground/20 text-primary-foreground font-semibold px-10 py-4 rounded-full text-lg hover:border-primary-foreground/40 hover:bg-primary-foreground/5 transition-all duration-300"
+              >
+                Admin Panel
+              </Link>
             </motion.div>
 
             <motion.div

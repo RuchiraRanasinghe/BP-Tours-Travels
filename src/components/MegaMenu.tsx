@@ -251,20 +251,20 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
         items: [
           {
             label: "Phone",
-            href: "tel:+94771399144",
-            description: "+94 771 399 144",
+            href: "tel:+94707290144",
+            description: "+94 70 729 0144",
             icon: <Phone className="w-4 h-4" />,
           },
           {
             label: "WhatsApp",
-            href: "https://wa.me/94771399144",
+            href: "https://wa.me/94707290144",
             description: "Quick messaging support",
             icon: <MessageCircle className="w-4 h-4" />,
           },
           {
             label: "Email Support",
-            href: "mailto:info@bptours.lk",
-            description: "info@bptours.lk",
+            href: "mailto:bandarapremathilaka.tours@gmail.com",
+            description: "bandarapremathilaka.tours@gmail.com",
             icon: <MapPin className="w-4 h-4" />,
           },
           {

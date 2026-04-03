@@ -16,7 +16,7 @@ const Footer = () => {
           </div>
 
           <div className="text-center md:text-right text-background/50 text-sm space-y-1">
-            <p>📞 070 739 9144 &nbsp;|&nbsp; 💬 077 139 9144</p>
+            <p>📞 070 729 0144 &nbsp;|&nbsp; 💬 077 173 9144</p>
             <p>© {new Date().getFullYear()} BP Tours & Travels. All rights reserved.</p>
           </div>
         </div>
