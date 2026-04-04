@@ -3,7 +3,7 @@ import { Mail, MessageCircle, Phone } from "lucide-react";
 const FloatingButtons = () => {
   return (
     <>
-      <div className="fixed left-4 bottom-24 md:bottom-6 z-50 flex flex-col gap-3">
+      <div className="fixed left-4 bottom-24 md:bottom-6 z-50 flex flex-col gap-3 md:hidden">
         <a
           href="tel:+94707290144"
           className="w-14 h-14 rounded-full bg-gradient-blue text-primary-foreground flex items-center justify-center shadow-blue hover:scale-125 active:scale-100 transition-transform duration-300"
