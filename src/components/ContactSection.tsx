@@ -1,14 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, MessageCircle, Phone, MapPin } from "lucide-react";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" as const },
-  }),
-};
+import { fadeUp } from "@/lib/animations";
 
 const ContactSection = () => {
   return (
@@ -63,31 +56,13 @@ const ContactSection = () => {
           </motion.a>
 
           <motion.a
-            href="https://wa.me/94707290144"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 group hover:scale-105"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            variants={fadeUp}
-            custom={3}
-          >
-            <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-blue group-hover:scale-110 transition-all duration-300">
-              <MessageCircle className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
-            </div>
-            <p className="font-semibold text-foreground text-lg">WhatsApp</p>
-            <p className="text-muted-foreground text-sm mt-1">070 729 0144</p>
-          </motion.a>
-
-          <motion.a
             href="mailto:bandarapremathilaka.tours@gmail.com"
             className="bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 group hover:scale-105"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
             variants={fadeUp}
-            custom={4}
+            custom={3}
           >
             <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-blue group-hover:scale-110 transition-all duration-300">
               <Mail className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />

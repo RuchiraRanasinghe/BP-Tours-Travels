@@ -7,14 +7,7 @@ const highlights = [
   { icon: ThumbsUp, title: "Customer First", desc: "Thousands of happy travelers across Sri Lanka trust us.", stat: "5K+", statLabel: "Happy Rides" },
 ];
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.12, duration: 0.5, ease: "easeOut" as const },
-  }),
-};
+import { fadeUp } from "@/lib/animations";
 
 const AboutSection = () => {
   return (

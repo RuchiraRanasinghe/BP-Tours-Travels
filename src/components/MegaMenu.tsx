@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, MapPin, Users, Phone, MessageCircle, Car, Plane, Map, Zap } from "lucide-react";
+import { ChevronDown, MapPin, Users, Phone, MessageCircle, Car, Plane, Map, Zap, Mail } from "lucide-react";
 
 interface MenuSection {
   title: string;
@@ -256,16 +256,10 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
             icon: <Phone className="w-4 h-4" />,
           },
           {
-            label: "WhatsApp",
-            href: "https://wa.me/94707290144",
-            description: "Quick messaging support",
-            icon: <MessageCircle className="w-4 h-4" />,
-          },
-          {
             label: "Email Support",
             href: "mailto:bandarapremathilaka.tours@gmail.com",
             description: "bandarapremathilaka.tours@gmail.com",
-            icon: <MapPin className="w-4 h-4" />,
+            icon: <Mail className="w-4 h-4" />,
           },
           {
             label: "Contact Form",

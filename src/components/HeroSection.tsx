@@ -61,18 +61,9 @@ const HeroSection = () => {
               >
                 Book Now
               </button>
-              <a
-                href="https://wa.me/94707290144"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-primary-foreground/20 text-primary-foreground font-semibold px-10 py-4 rounded-full text-lg hover:border-primary-foreground/40 hover:bg-primary-foreground/5 transition-all duration-300"
-              >
-                WhatsApp Us
-              </a>
-
               <Link
                 to="/admin"
-                className="border-2 border-primary-foreground/20 text-primary-foreground font-semibold px-10 py-4 rounded-full text-lg hover:border-primary-foreground/40 hover:bg-primary-foreground/5 transition-all duration-300"
+                className="border-2 border-primary-foreground/20 text-primary-foreground font-semibold px-8 py-3.5 rounded-full text-base hover:border-primary-foreground/40 hover:bg-primary-foreground/5 transition-all duration-300"
               >
                 Admin Panel
               </Link>
@@ -103,7 +94,7 @@ const HeroSection = () => {
                   alt="Premium travel in Sri Lanka"
                   width={1280}
                   height={960}
-                  className="h-[320px] w-full object-contain object-center md:h-[420px]"
+                  className="w-full h-auto object-contain object-center"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent" />

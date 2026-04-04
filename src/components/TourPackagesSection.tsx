@@ -2,14 +2,7 @@ import { motion } from "framer-motion";
 import { Eye } from "lucide-react";
 import { useAdminData } from "@/hooks/useAdminData";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: index * 0.08, duration: 0.5, ease: "easeOut" as const },
-  }),
-};
+import { fadeUp } from "@/lib/animations";
 
 const TourPackagesSection = () => {
   const { packages } = useAdminData();

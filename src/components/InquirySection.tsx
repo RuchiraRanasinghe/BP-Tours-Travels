@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { businessEmail, createId, updateAdminData, type TripType } from "@/lib/adminStore";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
-};
+import { fadeUpSimple } from "@/lib/animations";
 
 const InquirySection = () => {
   const [form, setForm] = useState({
@@ -62,7 +59,7 @@ const InquirySection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
-          variants={fadeUp}
+          variants={fadeUpSimple}
         >
           <span className="text-sm font-semibold tracking-[0.15em] uppercase text-primary mb-3 block">Inquiry Form</span>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">Send Your Inquiry</h2>
@@ -75,7 +72,7 @@ const InquirySection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          variants={fadeUp}
+          variants={fadeUpSimple}
         >
           <div className="grid sm:grid-cols-2 gap-5 mb-5">
             <div>
