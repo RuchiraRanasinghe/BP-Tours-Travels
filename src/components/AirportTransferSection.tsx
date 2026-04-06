@@ -122,7 +122,7 @@ const AirportTransferSection = () => {
               }`}
             >
               <Plane className="w-4 h-4" />
-              Airport to Hotel
+              Airport
             </button>
 
             <button
@@ -144,7 +144,7 @@ const AirportTransferSection = () => {
               }`}
             >
               <Clock3 className="w-4 h-4" />
-              Hotel to Airport
+              Hotel
             </button>
           </div>
 
