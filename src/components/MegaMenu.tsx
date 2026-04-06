@@ -121,62 +121,7 @@ interface NavbarMegaMenuProps {
 
 const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
   const menuStructure = {
-    // 1. Quick Booking & 2. Scheduled Booking
-    booking: [
-      {
-        title: "Quick Booking",
-        items: [
-          {
-            label: "Ride Now",
-            href: "#booking-now",
-            description: "Instant pickup - book immediately",
-            icon: <Zap className="w-4 h-4" />,
-          },
-          {
-            label: "Request Pickup",
-            href: "#booking-now",
-            description: "Get a ride right away",
-            icon: <Car className="w-4 h-4" />,
-          },
-        ],
-      },
-      {
-        title: "Scheduled Booking",
-        items: [
-          {
-            label: "Schedule a Ride",
-            href: "#booking-schedule",
-            description: "Book for a future time",
-            icon: <Clock className="w-4 h-4" />,
-          },
-          {
-            label: "Plan Trip",
-            href: "#booking-schedule",
-            description: "Arrange rides in advance",
-            icon: <Map className="w-4 h-4" />,
-          },
-        ],
-      },
-      {
-        title: "Multi-Stop Options",
-        items: [
-          {
-            label: "Round Trip",
-            href: "#multi-stop",
-            description: "Return journey booking",
-            icon: <Navigation className="w-4 h-4" />,
-          },
-          {
-            label: "Add Stop",
-            href: "#multi-stop",
-            description: "Multiple pickups & drops",
-            icon: <MapPin className="w-4 h-4" />,
-          },
-        ],
-      },
-    ],
-
-    // 3. Airport Transfer
+    // 1. Airport Transfer - PRIMARY FOCUS
     airport: [
       {
         title: "Airport Services",
@@ -209,10 +154,65 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
       },
     ],
 
-    // 5. Pricing & Fare & 6. Ride Type / Vehicle
-    services: [
+    // 2. Book Ride - Local Transport
+    booking: [
       {
-        title: "Pricing & Fare",
+        title: "Instant Booking",
+        items: [
+          {
+            label: "Ride Now",
+            href: "#booking-now",
+            description: "Instant pickup - book immediately",
+            icon: <Zap className="w-4 h-4" />,
+          },
+          {
+            label: "Request Pickup",
+            href: "#booking-now",
+            description: "Get a ride right away",
+            icon: <Car className="w-4 h-4" />,
+          },
+        ],
+      },
+      {
+        title: "Scheduled Booking",
+        items: [
+          {
+            label: "Schedule a Ride",
+            href: "#booking-schedule",
+            description: "Book for a future time",
+            icon: <Clock className="w-4 h-4" />,
+          },
+          {
+            label: "Local Rides",
+            href: "#services",
+            description: "City transfers & tours",
+            icon: <Navigation className="w-4 h-4" />,
+          },
+        ],
+      },
+      {
+        title: "Multi-Stop Options",
+        items: [
+          {
+            label: "Round Trip",
+            href: "#multi-stop",
+            description: "Return journey booking",
+            icon: <Navigation className="w-4 h-4" />,
+          },
+          {
+            label: "Add Stop",
+            href: "#multi-stop",
+            description: "Multiple pickups & drops",
+            icon: <MapPin className="w-4 h-4" />,
+          },
+        ],
+      },
+    ],
+
+    // 3. Pricing
+    pricing: [
+      {
+        title: "Fare & Pricing",
         items: [
           {
             label: "Fare Estimator",
@@ -226,27 +226,19 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
             description: "Transparent pricing",
             icon: <DollarSign className="w-4 h-4" />,
           },
-          {
-            label: "See Rates",
-            href: "#rate-chart",
-            description: "View all pricing options",
-            icon: <Map className="w-4 h-4" />,
-          },
         ],
       },
+    ],
+
+    // 4. Vehicles
+    vehicles: [
       {
-        title: "Fleet & Vehicle Choice",
+        title: "Choose Your Ride",
         items: [
-          {
-            label: "Our Vehicles",
-            href: "#fleet",
-            description: "See all available options",
-            icon: <Car className="w-4 h-4" />,
-          },
           {
             label: "Choose Ride Type",
             href: "#fleet",
-            description: "Sedan, SUV, Hatchback, Bike",
+            description: "Sedan, SUV, Hatchback",
             icon: <Car className="w-4 h-4" />,
           },
           {
@@ -255,15 +247,6 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
             description: "Vehicle space & amenities",
             icon: <Zap className="w-4 h-4" />,
           },
-        ],
-      },
-    ],
-
-    // 7. Tracking & 4. More Services
-    tracking: [
-      {
-        title: "Live Tracking",
-        items: [
           {
             label: "Live Tracking",
             href: "#track-ride",
@@ -271,92 +254,17 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
             icon: <Navigation className="w-4 h-4" />,
           },
           {
-            label: "Trip Status",
-            href: "#track-ride",
-            description: "Monitor your ride live",
-            icon: <Zap className="w-4 h-4" />,
-          },
-          {
-            label: "Share Ride Progress",
+            label: "Share Trip Progress",
             href: "#track-ride",
             description: "Send tracking link to others",
             icon: <Share2 className="w-4 h-4" />,
           },
         ],
       },
-      {
-        title: "Tour & Transfer",
-        items: [
-          {
-            label: "Island Tours",
-            href: "#services",
-            description: "Multi-day sightseeing",
-            icon: <Map className="w-4 h-4" />,
-          },
-          {
-            label: "Local Rides",
-            href: "#services",
-            description: "City transfers & tours",
-            icon: <Navigation className="w-4 h-4" />,
-          },
-          {
-            label: "24/7 Availability",
-            href: "#services",
-            description: "Round-the-clock service",
-            icon: <Clock className="w-4 h-4" />,
-          },
-        ],
-      },
     ],
 
-    // 8. Corporate, 9. Safety, 10. Account
-    account: [
-      {
-        title: "Corporate & Business",
-        items: [
-          {
-            label: "Corporate Booking",
-            href: "#corporate",
-            description: "Business travel solutions",
-            icon: <Briefcase className="w-4 h-4" />,
-          },
-          {
-            label: "Business Account",
-            href: "#corporate",
-            description: "Team & company accounts",
-            icon: <Users className="w-4 h-4" />,
-          },
-          {
-            label: "Monthly Billing",
-            href: "#corporate",
-            description: "Invoice & payment plans",
-            icon: <DollarSign className="w-4 h-4" />,
-          },
-        ],
-      },
-      {
-        title: "My Account",
-        items: [
-          {
-            label: "My Rides",
-            href: "#my-rides",
-            description: "View ride history",
-            icon: <Car className="w-4 h-4" />,
-          },
-          {
-            label: "Saved Places",
-            href: "#saved-places",
-            description: "Home, Work, Favorites",
-            icon: <MapPin className="w-4 h-4" />,
-          },
-          {
-            label: "Payment Methods",
-            href: "#account",
-            description: "Manage cards & wallets",
-            icon: <DollarSign className="w-4 h-4" />,
-          },
-        ],
-      },
+    // 5. Support
+    support: [
       {
         title: "Safety & Support",
         items: [
@@ -367,66 +275,16 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
             icon: <MessageCircle className="w-4 h-4" />,
           },
           {
-            label: "Ride Safety",
-            href: "#safety",
-            description: "Safety features & info",
-            icon: <Shield className="w-4 h-4" />,
-          },
-          {
             label: "Emergency Contact",
             href: "#support",
             description: "Emergency assistance",
             icon: <Phone className="w-4 h-4" />,
           },
-        ],
-      },
-    ],
-
-    // 11. Driver/Partner & 12. Promotions
-    more: [
-      {
-        title: "Opportunities",
-        items: [
           {
-            label: "Become a Driver",
-            href: "#driver-signup",
-            description: "Join our driver network",
-            icon: <Car className="w-4 h-4" />,
-          },
-          {
-            label: "Partner With Us",
-            href: "#partner",
-            description: "Business partnerships",
-            icon: <Briefcase className="w-4 h-4" />,
-          },
-          {
-            label: "Driver Login",
-            href: "#driver-login",
-            description: "Partner portal access",
-            icon: <LogIn className="w-4 h-4" />,
-          },
-        ],
-      },
-      {
-        title: "Rewards & Deals",
-        items: [
-          {
-            label: "Offers",
-            href: "#promotions",
-            description: "Current deals & discounts",
-            icon: <Gift className="w-4 h-4" />,
-          },
-          {
-            label: "Refer & Earn",
-            href: "#referral",
-            description: "Get rewards for referrals",
-            icon: <Users className="w-4 h-4" />,
-          },
-          {
-            label: "Ride Pass",
-            href: "#membership",
-            description: "Monthly subscription plans",
-            icon: <Gift className="w-4 h-4" />,
+            label: "Ride Safety",
+            href: "#safety",
+            description: "Safety features & info",
+            icon: <Shield className="w-4 h-4" />,
           },
         ],
       },
@@ -440,16 +298,48 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
             icon: <Phone className="w-4 h-4" />,
           },
           {
-            label: "About Us",
-            href: "#about",
-            description: "Our story & team",
-            icon: <Users className="w-4 h-4" />,
-          },
-          {
             label: "FAQs",
             href: "#faq",
             description: "Common questions answered",
             icon: <MessageCircle className="w-4 h-4" />,
+          },
+        ],
+      },
+    ],
+
+    // 6. Account
+    account: [
+      {
+        title: "My Account",
+        items: [
+          {
+            label: "My Rides",
+            href: "#my-rides",
+            description: "View ride history",
+            icon: <Car className="w-4 h-4" />,
+          },
+          {
+            label: "Saved Places",
+            href: "#saved-places",
+            description: "Home, Work, Airports, Hotels",
+            icon: <MapPin className="w-4 h-4" />,
+          },
+          {
+            label: "Payment Methods",
+            href: "#account",
+            description: "Manage cards & wallets",
+            icon: <DollarSign className="w-4 h-4" />,
+          },
+        ],
+      },
+      {
+        title: "Loyalty",
+        items: [
+          {
+            label: "Refer & Earn",
+            href: "#referral",
+            description: "Get rewards for referrals",
+            icon: <Gift className="w-4 h-4" />,
           },
         ],
       },
@@ -464,12 +354,12 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
           : "border-white/25 bg-background/20 shadow-[0_10px_30px_rgba(15,23,42,0.1)]"
       }`}
     >
-      <MegaMenuItem label="Book Ride" sections={menuStructure.booking} scrolled={scrolled} />
       <MegaMenuItem label="Airport" sections={menuStructure.airport} scrolled={scrolled} />
-      <MegaMenuItem label="Services" sections={menuStructure.services} scrolled={scrolled} />
-      <MegaMenuItem label="Track & Tour" sections={menuStructure.tracking} scrolled={scrolled} />
+      <MegaMenuItem label="Book Ride" sections={menuStructure.booking} scrolled={scrolled} />
+      <MegaMenuItem label="Pricing" sections={menuStructure.pricing} scrolled={scrolled} />
+      <MegaMenuItem label="Vehicles" sections={menuStructure.vehicles} scrolled={scrolled} />
+      <MegaMenuItem label="Support" sections={menuStructure.support} scrolled={scrolled} />
       <MegaMenuItem label="Account" sections={menuStructure.account} scrolled={scrolled} />
-      <MegaMenuItem label="More" sections={menuStructure.more} scrolled={scrolled} />
     </div>
   );
 };

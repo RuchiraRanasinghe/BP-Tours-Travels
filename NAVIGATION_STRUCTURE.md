@@ -1,7 +1,7 @@
 # BP Tours-Travels Navigation Structure
 
 ## Overview
-Updated navigation to support all 12 booking requirement categories for better user experience across web and mobile.
+Optimized navigation focused on Airport Services and Local Transport. Removed B2B, internal, and irrelevant features to streamline the customer experience.
 
 ---
 
@@ -9,85 +9,62 @@ Updated navigation to support all 12 booking requirement categories for better u
 
 ### Primary Navigation (Desktop & Mobile)
 
-#### 1. **Book Ride** (Mega Menu)
-Handles all booking scenarios
-- **Quick Booking**
+#### 1. **Airport** (Mega Menu) - PRIMARY FOCUS
+Core airport transfer services - our biggest differentiator
+- **Airport Services**
+  - Airport Pickup (flight tracking & timely arrival) ⭐ KEY DIFFERENTIATOR
+  - Airport Drop (luggage assistance & comfort)
+  - Meet & Greet (personal greeting service - charge extra)
+  - Flight-Based Booking (sync with your flight time)
+
+#### 2. **Book Ride** (Mega Menu)
+All local transport booking types
+- **Instant Booking**
   - Ride Now (instant pickup - book immediately)
   - Request Pickup (get a ride right away)
   
 - **Scheduled Booking**
   - Schedule a Ride (book for a future time)
-  - Plan Trip (arrange rides in advance)
+  - Local Rides (city transfers & tours)
   
 - **Multi-Stop Options**
   - Round Trip (return journey booking)
   - Add Stop (multiple pickups & drops)
 
-#### 2. **Airport** (Mega Menu)
-Dedicated airport transfer services
-- **Airport Services**
-  - Airport Pickup (flight tracking & timely arrival)
-  - Airport Drop (luggage assistance & comfort)
-  - Meet & Greet (personal greeting service)
-  - Flight-Based Booking (sync with your flight time)
-
-#### 3. **Services** (Mega Menu)
-Pricing, fleet, and travel options
-- **Pricing & Fare**
+#### 3. **Pricing** (Mega Menu)
+Transparent pricing for trust
+- **Fare & Pricing**
   - Fare Estimator (check trip costs before booking)
   - Price Calculator (transparent pricing)
-  - See Rates (view all pricing options)
-  
-- **Fleet & Vehicle Choice**
-  - Our Vehicles (see all available options)
-  - Choose Ride Type (Sedan, SUV, Hatchback, Bike)
-  - Luggage Capacity (vehicle space & amenities)
 
-#### 4. **Track & Tour** (Mega Menu)
-Live tracking and tour services
-- **Live Tracking**
+#### 4. **Vehicles** (Mega Menu)
+Fleet options and luggage focus
+- **Choose Your Ride**
+  - Choose Ride Type (Sedan, SUV, Hatchback)
+  - Luggage Capacity (vehicle space & amenities) ⭐ CRITICAL FOR AIRPORT
   - Live Tracking (real-time driver location)
-  - Trip Status (monitor your ride live)
-  - Share Ride Progress (send tracking link to others)
-  
-- **Tour & Transfer**
-  - Island Tours (multi-day sightseeing)
-  - Local Rides (city transfers & tours)
-  - 24/7 Availability (round-the-clock service)
+  - Share Trip Progress (send tracking link to others)
 
-#### 5. **Account** (Mega Menu)
-User accounts, corporate, and support
-- **Corporate & Business**
-  - Corporate Booking (business travel solutions)
-  - Business Account (team & company accounts)
-  - Monthly Billing (invoice & payment plans)
-  
-- **My Account**
-  - My Rides (view ride history)
-  - Saved Places (Home, Work, Favorites)
-  - Payment Methods (manage cards & wallets)
-  
+#### 5. **Support** (Mega Menu)
+Safety, support, and company trust signals
 - **Safety & Support**
-  - 24/7 Support (get help anytime)
-  - Ride Safety (safety features & info)
+  - 24/7 Support (get help anytime - critical for flight delays)
   - Emergency Contact (emergency assistance)
-
-#### 6. **More** (Mega Menu)
-Driver opportunities and loyalty programs
-- **Opportunities**
-  - Become a Driver (join our driver network)
-  - Partner With Us (business partnerships)
-  - Driver Login (partner portal access)
-  
-- **Rewards & Deals**
-  - Offers (current deals & discounts)
-  - Refer & Earn (get rewards for referrals)
-  - Ride Pass (monthly subscription plans)
+  - Ride Safety (safety features & info)
   
 - **Company**
   - Contact Us (get in touch with us)
-  - About Us (our story & team)
   - FAQs (common questions answered)
+
+#### 6. **Account** (Mega Menu)
+User profile and preferences
+- **My Account**
+  - My Rides (view ride history)
+  - Saved Places (Home, Work, Favorites Airports/Hotels)
+  - Payment Methods (manage cards & wallets)
+  
+- **Loyalty**
+  - Refer & Earn (get rewards for referrals)
 
 ### Secondary Navigation Elements
 
