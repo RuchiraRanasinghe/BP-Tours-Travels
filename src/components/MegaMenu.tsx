@@ -1,5 +1,25 @@
 import { useState } from "react";
-import { ChevronDown, MapPin, Users, Phone, MessageCircle, Car, Plane, Map, Zap, Mail } from "lucide-react";
+import {
+  ChevronDown,
+  MapPin,
+  Users,
+  Phone,
+  MessageCircle,
+  Car,
+  Plane,
+  Map,
+  Zap,
+  Mail,
+  Clock,
+  DollarSign,
+  Navigation,
+  Briefcase,
+  Shield,
+  User,
+  Gift,
+  LogIn,
+  Share2,
+} from "lucide-react";
 
 interface MenuSection {
   title: string;
@@ -101,188 +121,335 @@ interface NavbarMegaMenuProps {
 
 const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
   const menuStructure = {
-    services: [
+    // 1. Quick Booking & 2. Scheduled Booking
+    booking: [
       {
-        title: "Core Services",
+        title: "Quick Booking",
+        items: [
+          {
+            label: "Ride Now",
+            href: "#booking-now",
+            description: "Instant pickup - book immediately",
+            icon: <Zap className="w-4 h-4" />,
+          },
+          {
+            label: "Request Pickup",
+            href: "#booking-now",
+            description: "Get a ride right away",
+            icon: <Car className="w-4 h-4" />,
+          },
+        ],
+      },
+      {
+        title: "Scheduled Booking",
+        items: [
+          {
+            label: "Schedule a Ride",
+            href: "#booking-schedule",
+            description: "Book for a future time",
+            icon: <Clock className="w-4 h-4" />,
+          },
+          {
+            label: "Plan Trip",
+            href: "#booking-schedule",
+            description: "Arrange rides in advance",
+            icon: <Map className="w-4 h-4" />,
+          },
+        ],
+      },
+      {
+        title: "Multi-Stop Options",
+        items: [
+          {
+            label: "Round Trip",
+            href: "#multi-stop",
+            description: "Return journey booking",
+            icon: <Navigation className="w-4 h-4" />,
+          },
+          {
+            label: "Add Stop",
+            href: "#multi-stop",
+            description: "Multiple pickups & drops",
+            icon: <MapPin className="w-4 h-4" />,
+          },
+        ],
+      },
+    ],
+
+    // 3. Airport Transfer
+    airport: [
+      {
+        title: "Airport Services",
         items: [
           {
             label: "Airport Pickup",
-            href: "#services",
+            href: "#airport-transfer",
             description: "Flight tracking & timely arrival",
             icon: <Plane className="w-4 h-4" />,
           },
           {
             label: "Airport Drop",
-            href: "#services",
+            href: "#airport-transfer",
             description: "Luggage assistance & comfort",
             icon: <MapPin className="w-4 h-4" />,
           },
           {
-            label: "Local Rides",
-            href: "#services",
-            description: "City tours & short transfers",
-            icon: <Car className="w-4 h-4" />,
+            label: "Meet & Greet",
+            href: "#airport-transfer",
+            description: "Personal greeting service",
+            icon: <Users className="w-4 h-4" />,
           },
           {
-            label: "Island Tours",
-            href: "#services",
-            description: "Multi-day sightseeing packages",
+            label: "Flight-Based Booking",
+            href: "#airport-transfer",
+            description: "Sync with your flight time",
+            icon: <Clock className="w-4 h-4" />,
+          },
+        ],
+      },
+    ],
+
+    // 5. Pricing & Fare & 6. Ride Type / Vehicle
+    services: [
+      {
+        title: "Pricing & Fare",
+        items: [
+          {
+            label: "Fare Estimator",
+            href: "#fare-estimator",
+            description: "Check trip costs before booking",
+            icon: <DollarSign className="w-4 h-4" />,
+          },
+          {
+            label: "Price Calculator",
+            href: "#fare-estimator",
+            description: "Transparent pricing",
+            icon: <DollarSign className="w-4 h-4" />,
+          },
+          {
+            label: "See Rates",
+            href: "#rate-chart",
+            description: "View all pricing options",
             icon: <Map className="w-4 h-4" />,
           },
         ],
       },
       {
-        title: "Special Services",
+        title: "Fleet & Vehicle Choice",
         items: [
           {
-            label: "Corporate Travel",
+            label: "Our Vehicles",
+            href: "#fleet",
+            description: "See all available options",
+            icon: <Car className="w-4 h-4" />,
+          },
+          {
+            label: "Choose Ride Type",
+            href: "#fleet",
+            description: "Sedan, SUV, Hatchback, Bike",
+            icon: <Car className="w-4 h-4" />,
+          },
+          {
+            label: "Luggage Capacity",
+            href: "#fleet",
+            description: "Vehicle space & amenities",
+            icon: <Zap className="w-4 h-4" />,
+          },
+        ],
+      },
+    ],
+
+    // 7. Tracking & 4. More Services
+    tracking: [
+      {
+        title: "Live Tracking",
+        items: [
+          {
+            label: "Live Tracking",
+            href: "#track-ride",
+            description: "Real-time driver location",
+            icon: <Navigation className="w-4 h-4" />,
+          },
+          {
+            label: "Trip Status",
+            href: "#track-ride",
+            description: "Monitor your ride live",
+            icon: <Zap className="w-4 h-4" />,
+          },
+          {
+            label: "Share Ride Progress",
+            href: "#track-ride",
+            description: "Send tracking link to others",
+            icon: <Share2 className="w-4 h-4" />,
+          },
+        ],
+      },
+      {
+        title: "Tour & Transfer",
+        items: [
+          {
+            label: "Island Tours",
             href: "#services",
-            description: "Business & team transfers",
-            icon: <Users className="w-4 h-4" />,
+            description: "Multi-day sightseeing",
+            icon: <Map className="w-4 h-4" />,
+          },
+          {
+            label: "Local Rides",
+            href: "#services",
+            description: "City transfers & tours",
+            icon: <Navigation className="w-4 h-4" />,
           },
           {
             label: "24/7 Availability",
             href: "#services",
-            description: "Round-the-clock operations",
-            icon: <Zap className="w-4 h-4" />,
+            description: "Round-the-clock service",
+            icon: <Clock className="w-4 h-4" />,
           },
         ],
       },
     ],
-    fleet: [
+
+    // 8. Corporate, 9. Safety, 10. Account
+    account: [
       {
-        title: "Vehicle Types",
+        title: "Corporate & Business",
         items: [
           {
-            label: "Economy Cars",
-            href: "#fleet",
-            description: "Fuel-efficient & comfortable",
-            icon: <Car className="w-4 h-4" />,
+            label: "Corporate Booking",
+            href: "#corporate",
+            description: "Business travel solutions",
+            icon: <Briefcase className="w-4 h-4" />,
           },
           {
-            label: "Luxury Vehicles",
-            href: "#fleet",
-            description: "Premium travel experience",
-            icon: <Car className="w-4 h-4" />,
-          },
-          {
-            label: "Passenger Vans",
-            href: "#fleet",
-            description: "Groups & families",
-            icon: <Car className="w-4 h-4" />,
-          },
-          {
-            label: "Tour Coaches",
-            href: "#fleet",
-            description: "Large group tours",
-            icon: <Car className="w-4 h-4" />,
-          },
-        ],
-      },
-      {
-        title: "What You Get",
-        items: [
-          {
-            label: "Professional Drivers",
-            href: "#fleet",
-            description: "Trained & experienced",
+            label: "Business Account",
+            href: "#corporate",
+            description: "Team & company accounts",
             icon: <Users className="w-4 h-4" />,
           },
           {
-            label: "Well-Maintained",
-            href: "#fleet",
-            description: "Regular servicing & checks",
-            icon: <Zap className="w-4 h-4" />,
+            label: "Monthly Billing",
+            href: "#corporate",
+            description: "Invoice & payment plans",
+            icon: <DollarSign className="w-4 h-4" />,
+          },
+        ],
+      },
+      {
+        title: "My Account",
+        items: [
+          {
+            label: "My Rides",
+            href: "#my-rides",
+            description: "View ride history",
+            icon: <Car className="w-4 h-4" />,
+          },
+          {
+            label: "Saved Places",
+            href: "#saved-places",
+            description: "Home, Work, Favorites",
+            icon: <MapPin className="w-4 h-4" />,
+          },
+          {
+            label: "Payment Methods",
+            href: "#account",
+            description: "Manage cards & wallets",
+            icon: <DollarSign className="w-4 h-4" />,
+          },
+        ],
+      },
+      {
+        title: "Safety & Support",
+        items: [
+          {
+            label: "24/7 Support",
+            href: "#support",
+            description: "Get help anytime",
+            icon: <MessageCircle className="w-4 h-4" />,
+          },
+          {
+            label: "Ride Safety",
+            href: "#safety",
+            description: "Safety features & info",
+            icon: <Shield className="w-4 h-4" />,
+          },
+          {
+            label: "Emergency Contact",
+            href: "#support",
+            description: "Emergency assistance",
+            icon: <Phone className="w-4 h-4" />,
           },
         ],
       },
     ],
-    about: [
+
+    // 11. Driver/Partner & 12. Promotions
+    more: [
+      {
+        title: "Opportunities",
+        items: [
+          {
+            label: "Become a Driver",
+            href: "#driver-signup",
+            description: "Join our driver network",
+            icon: <Car className="w-4 h-4" />,
+          },
+          {
+            label: "Partner With Us",
+            href: "#partner",
+            description: "Business partnerships",
+            icon: <Briefcase className="w-4 h-4" />,
+          },
+          {
+            label: "Driver Login",
+            href: "#driver-login",
+            description: "Partner portal access",
+            icon: <LogIn className="w-4 h-4" />,
+          },
+        ],
+      },
+      {
+        title: "Rewards & Deals",
+        items: [
+          {
+            label: "Offers",
+            href: "#promotions",
+            description: "Current deals & discounts",
+            icon: <Gift className="w-4 h-4" />,
+          },
+          {
+            label: "Refer & Earn",
+            href: "#referral",
+            description: "Get rewards for referrals",
+            icon: <Users className="w-4 h-4" />,
+          },
+          {
+            label: "Ride Pass",
+            href: "#membership",
+            description: "Monthly subscription plans",
+            icon: <Gift className="w-4 h-4" />,
+          },
+        ],
+      },
       {
         title: "Company",
         items: [
           {
-            label: "Our Story",
-            href: "#about",
-            description: "Founded by Bandara Premathilaka",
-            icon: <MapPin className="w-4 h-4" />,
-          },
-          {
-            label: "Our Team",
-            href: "#about",
-            description: "Meet our dedicated staff",
-            icon: <Users className="w-4 h-4" />,
-          },
-          {
-            label: "Why Choose Us",
-            href: "#about",
-            description: "Quality & reliability",
-            icon: <Car className="w-4 h-4" />,
-          },
-          {
-            label: "Testimonials",
-            href: "#about",
-            description: "What our guests say",
-            icon: <Users className="w-4 h-4" />,
-          },
-        ],
-      },
-      {
-        title: "Resources",
-        items: [
-          {
-            label: "Blog & Updates",
-            href: "#about",
-            description: "Travel tips & news",
-            icon: <Map className="w-4 h-4" />,
-          },
-          {
-            label: "FAQs",
-            href: "#about",
-            description: "Common questions answered",
-            icon: <MessageCircle className="w-4 h-4" />,
-          },
-        ],
-      },
-    ],
-    contact: [
-      {
-        title: "Get in Touch",
-        items: [
-          {
-            label: "Phone",
-            href: "tel:+94707290144",
-            description: "+94 70 729 0144",
+            label: "Contact Us",
+            href: "#contact",
+            description: "Get in touch with us",
             icon: <Phone className="w-4 h-4" />,
           },
           {
-            label: "Email Support",
-            href: "mailto:bandarapremathilaka.tours@gmail.com",
-            description: "bandarapremathilaka.tours@gmail.com",
-            icon: <Mail className="w-4 h-4" />,
-          },
-          {
-            label: "Contact Form",
-            href: "#contact",
-            description: "Send us a message",
-            icon: <MessageCircle className="w-4 h-4" />,
-          },
-        ],
-      },
-      {
-        title: "Follow Us",
-        items: [
-          {
-            label: "Social Media",
-            href: "#contact",
-            description: "Connect on social",
+            label: "About Us",
+            href: "#about",
+            description: "Our story & team",
             icon: <Users className="w-4 h-4" />,
           },
           {
-            label: "Booking Status",
-            href: "#contact",
-            description: "Track your reservation",
-            icon: <Car className="w-4 h-4" />,
+            label: "FAQs",
+            href: "#faq",
+            description: "Common questions answered",
+            icon: <MessageCircle className="w-4 h-4" />,
           },
         ],
       },
@@ -297,10 +464,12 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
           : "border-white/25 bg-background/20 shadow-[0_10px_30px_rgba(15,23,42,0.1)]"
       }`}
     >
+      <MegaMenuItem label="Book Ride" sections={menuStructure.booking} scrolled={scrolled} />
+      <MegaMenuItem label="Airport" sections={menuStructure.airport} scrolled={scrolled} />
       <MegaMenuItem label="Services" sections={menuStructure.services} scrolled={scrolled} />
-      <MegaMenuItem label="Fleet" sections={menuStructure.fleet} scrolled={scrolled} />
-      <MegaMenuItem label="About" sections={menuStructure.about} scrolled={scrolled} />
-      <MegaMenuItem label="Contact" sections={menuStructure.contact} scrolled={scrolled} />
+      <MegaMenuItem label="Track & Tour" sections={menuStructure.tracking} scrolled={scrolled} />
+      <MegaMenuItem label="Account" sections={menuStructure.account} scrolled={scrolled} />
+      <MegaMenuItem label="More" sections={menuStructure.more} scrolled={scrolled} />
     </div>
   );
 };
