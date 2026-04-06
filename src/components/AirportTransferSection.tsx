@@ -91,6 +91,11 @@ const AirportTransferSection = () => {
   return (
     <section id="airport-transfer" className="py-24 md:py-32 bg-background">
       <div className="container px-6">
+        <span id="airport-pickup" className="block h-0 scroll-mt-24" aria-hidden="true" />
+        <span id="airport-drop" className="block h-0 scroll-mt-24" aria-hidden="true" />
+        <span id="meet-greet" className="block h-0 scroll-mt-24" aria-hidden="true" />
+        <span id="flight-based-booking" className="block h-0 scroll-mt-24" aria-hidden="true" />
+
         <motion.div
           className="text-center mb-12"
           initial="hidden"

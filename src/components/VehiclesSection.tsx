@@ -28,6 +28,9 @@ const VehiclesSection = () => {
   return (
     <section id="fleet" className="py-24 md:py-32 bg-surface">
       <div className="container px-6">
+        <span id="sedan-suv-hatchback" className="block h-0 scroll-mt-24" aria-hidden="true" />
+        <span id="luggage-capacity" className="block h-0 scroll-mt-24" aria-hidden="true" />
+
         <motion.div
           className="text-center mb-16"
           initial="hidden"

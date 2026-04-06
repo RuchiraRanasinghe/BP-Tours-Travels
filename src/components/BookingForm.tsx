@@ -55,6 +55,11 @@ const BookingForm = () => {
   return (
     <section id="booking" className="py-24 md:py-32 bg-surface-alt">
       <div className="container px-6">
+        <span id="booking-now" className="block h-0 scroll-mt-24" aria-hidden="true" />
+        <span id="booking-schedule" className="block h-0 scroll-mt-24" aria-hidden="true" />
+        <span id="round-trip" className="block h-0 scroll-mt-24" aria-hidden="true" />
+        <span id="add-stop" className="block h-0 scroll-mt-24" aria-hidden="true" />
+
         <motion.div
           className="text-center mb-12"
           initial="hidden"

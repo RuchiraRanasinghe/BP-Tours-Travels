@@ -128,25 +128,25 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
         items: [
           {
             label: "Airport Pickup",
-            href: "#airport-transfer",
+            href: "#airport-pickup",
             description: "Flight tracking & timely arrival",
             icon: <Plane className="w-4 h-4" />,
           },
           {
             label: "Airport Drop",
-            href: "#airport-transfer",
+            href: "#airport-drop",
             description: "Luggage assistance & comfort",
             icon: <MapPin className="w-4 h-4" />,
           },
           {
             label: "Meet & Greet",
-            href: "#airport-transfer",
+            href: "#meet-greet",
             description: "Personal greeting service",
             icon: <Users className="w-4 h-4" />,
           },
           {
             label: "Flight-Based Booking",
-            href: "#airport-transfer",
+            href: "#flight-based-booking",
             description: "Sync with your flight time",
             icon: <Clock className="w-4 h-4" />,
           },
@@ -183,7 +183,7 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
             icon: <Clock className="w-4 h-4" />,
           },
           {
-            label: "Local Rides",
+            label: "Local Transport",
             href: "#services",
             description: "City transfers & tours",
             icon: <Navigation className="w-4 h-4" />,
@@ -195,13 +195,13 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
         items: [
           {
             label: "Round Trip",
-            href: "#multi-stop",
+            href: "#round-trip",
             description: "Return journey booking",
             icon: <Navigation className="w-4 h-4" />,
           },
           {
             label: "Add Stop",
-            href: "#multi-stop",
+            href: "#add-stop",
             description: "Multiple pickups & drops",
             icon: <MapPin className="w-4 h-4" />,
           },
@@ -222,7 +222,7 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
           },
           {
             label: "Price Calculator",
-            href: "#fare-estimator",
+            href: "#price-calculator",
             description: "Transparent pricing",
             icon: <DollarSign className="w-4 h-4" />,
           },
@@ -236,14 +236,14 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
         title: "Choose Your Ride",
         items: [
           {
-            label: "Choose Ride Type",
+            label: "Sedan / SUV / Hatchback",
             href: "#fleet",
             description: "Sedan, SUV, Hatchback",
             icon: <Car className="w-4 h-4" />,
           },
           {
             label: "Luggage Capacity",
-            href: "#fleet",
+            href: "#luggage-capacity",
             description: "Vehicle space & amenities",
             icon: <Zap className="w-4 h-4" />,
           },
@@ -276,13 +276,13 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
           },
           {
             label: "Emergency Contact",
-            href: "#support",
+            href: "#emergency-contact",
             description: "Emergency assistance",
             icon: <Phone className="w-4 h-4" />,
           },
           {
             label: "Ride Safety",
-            href: "#safety",
+            href: "#support",
             description: "Safety features & info",
             icon: <Shield className="w-4 h-4" />,
           },
@@ -326,7 +326,7 @@ const NavbarMegaMenu = ({ scrolled }: NavbarMegaMenuProps) => {
           },
           {
             label: "Payment Methods",
-            href: "#account",
+            href: "#payment-methods",
             description: "Manage cards & wallets",
             icon: <DollarSign className="w-4 h-4" />,
           },

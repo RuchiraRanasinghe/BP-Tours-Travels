@@ -75,28 +75,28 @@ const Navbar = () => {
           <div className="border-b border-border/50 py-4">
             <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">✈️ Airport</p>
             <a
-              href="#airport-transfer"
+              href="#airport-pickup"
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
             >
               Airport Pickup
             </a>
             <a
-              href="#airport-transfer"
+              href="#airport-drop"
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
             >
               Airport Drop
             </a>
             <a
-              href="#airport-transfer"
+              href="#meet-greet"
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
             >
               Meet & Greet
             </a>
             <a
-              href="#airport-transfer"
+              href="#flight-based-booking"
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
             >
@@ -119,21 +119,21 @@ const Navbar = () => {
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
             >
-              📅 Schedule Ride
+              📅 Schedule a Ride
             </a>
             <a
-              href="#services"
+              href="#round-trip"
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
             >
-              🏙️ Local Rides
+              🏙️ Round Trip
             </a>
             <a
-              href="#multi-stop"
+              href="#add-stop"
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
             >
-              🗺️ Round Trip & Multi-Stop
+              🗺️ Add Stop
             </a>
           </div>
 
@@ -148,14 +148,14 @@ const Navbar = () => {
               💰 Fare Estimator
             </a>
             <a
-              href="#fleet"
+              href="#price-calculator"
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
             >
-              🚙 Choose Ride Type
+              🧮 Price Calculator
             </a>
             <a
-              href="#fleet"
+              href="#luggage-capacity"
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
             >
@@ -207,11 +207,11 @@ const Navbar = () => {
               🆘 24/7 Support
             </a>
             <a
-              href="#safety"
+              href="#emergency-contact"
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
             >
-              🛡️ Safety Info
+              🛡️ Emergency Contact
             </a>
             <a
               href="#faq"
