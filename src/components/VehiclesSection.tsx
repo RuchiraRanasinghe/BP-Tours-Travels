@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import carImg from "@/assets/car-service.jpg";
-import vanImg from "@/assets/van-service.jpg";
+import carImg from "@/assets/bestbauch-colombo-255410_1920.jpg";
+import vanImg from "@/assets/adil-photos-ella-4788958_1920.jpg";
 import { Users, Briefcase, ArrowRight, Check } from "lucide-react";
 
 const vehicles = [

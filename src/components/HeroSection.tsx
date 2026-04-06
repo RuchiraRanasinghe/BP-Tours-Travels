@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowRight, BadgeDollarSign, Clock3, MessageCircle, Star } from "lucide-react";
-import heroMainBg from "@/assets/Gemini_Generated_Image_k6w2u2k6w2u2k6w2.png";
+import heroMainBg from "@/assets/chathuraanuradha-tower-7314495_1920.jpg";
 
 const HeroSection = () => {
   const whatsappUrl = "https://wa.me/94707290144";
