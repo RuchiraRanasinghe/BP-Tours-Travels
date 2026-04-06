@@ -69,6 +69,10 @@ const AirportTransferSection = () => {
     "w-full px-4 py-3.5 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-sm";
   const labelClass = "block text-sm font-medium text-foreground mb-1.5";
   const isAirportToHotel = direction === "airport-to-hotel";
+  const leftMode = isAirportToHotel ? "airport" : "hotel";
+  const rightMode = isAirportToHotel ? "hotel" : "airport";
+
+  const toDirection = (mode: "airport" | "hotel") => (mode === "airport" ? "airport-to-hotel" : "hotel-to-airport");
 
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -114,15 +118,15 @@ const AirportTransferSection = () => {
           <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-3 mb-6">
             <button
               type="button"
-              onClick={() => setDirection("airport-to-hotel")}
+              onClick={() => setDirection(toDirection(leftMode))}
               className={`inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold transition-all ${
-                isAirportToHotel
+                direction === toDirection(leftMode)
                   ? "bg-gradient-blue text-primary-foreground shadow-blue"
                   : "bg-surface text-foreground border border-border hover:border-primary/50"
               }`}
             >
-              <Plane className="w-4 h-4" />
-              Airport
+              {leftMode === "airport" ? <Plane className="w-4 h-4" /> : <Clock3 className="w-4 h-4" />}
+              {leftMode === "airport" ? "Airport" : "Hotel"}
             </button>
 
             <button
@@ -136,15 +140,15 @@ const AirportTransferSection = () => {
 
             <button
               type="button"
-              onClick={() => setDirection("hotel-to-airport")}
+              onClick={() => setDirection(toDirection(rightMode))}
               className={`inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold transition-all ${
-                !isAirportToHotel
+                direction === toDirection(rightMode)
                   ? "bg-gradient-blue text-primary-foreground shadow-blue"
                   : "bg-surface text-foreground border border-border hover:border-primary/50"
               }`}
             >
-              <Clock3 className="w-4 h-4" />
-              Hotel
+              {rightMode === "airport" ? <Plane className="w-4 h-4" /> : <Clock3 className="w-4 h-4" />}
+              {rightMode === "airport" ? "Airport" : "Hotel"}
             </button>
           </div>
 
