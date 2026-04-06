@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
-import { ArrowDown, MapPin, ShieldCheck, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowDown, ArrowRight, BadgeDollarSign, Clock3, MapPin, MessageCircle, ShieldCheck, Sparkles, Star } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroMainBg from "@/assets/Gemini_Generated_Image_k6w2u2k6w2u2k6w2.png";
 
 const HeroSection = () => {
+  const whatsappUrl = "https://wa.me/94707290144";
+  const phoneNumber = "+94707290144";
+
   const scrollToBooking = () => {
     document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -20,34 +22,54 @@ const HeroSection = () => {
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="text-center lg:text-left">
             <motion.span
-              className="inline-block text-sm font-semibold tracking-[0.2em] uppercase text-primary mb-6"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold tracking-[0.22em] uppercase text-primary-foreground/85 backdrop-blur-sm mb-6"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Trusted Travel Partner in Sri Lanka
+              Sri Lanka Routes
             </motion.span>
 
             <motion.h1
-              className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-primary-foreground mb-6 leading-[1.05] tracking-tight"
+              className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-primary-foreground mb-6 leading-[1.02] tracking-tight"
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.12, duration: 0.6 }}
             >
-              Premium Travel
+              Trusted travel
               <br />
-              <span className="text-gradient-hero">with Comfort</span>
+              <span className="text-gradient-hero">across Sri Lanka</span>
             </motion.h1>
 
             <motion.p
-              className="text-primary-foreground/70 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-12 leading-relaxed"
+              className="max-w-xl mx-auto lg:mx-0 mb-8 rounded-2xl border border-white/12 bg-black/25 px-5 py-4 text-lg md:text-xl leading-relaxed text-white/95 shadow-lg backdrop-blur-sm"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.6 }}
             >
-              Airport transfers, local rides & island-wide tours.
-              Cars & vans — available 24/7.
+              Your trusted travel partner across the island with clean cars,
+              friendly drivers, scenic routes, and fast airport pickups.
             </motion.p>
+
+            <motion.div
+              className="flex flex-wrap justify-center lg:justify-start gap-3 mb-10"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.32, duration: 0.55 }}
+            >
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-primary-foreground/92 backdrop-blur-sm">
+                <Star className="h-4 w-4 fill-amber-300 text-amber-300" />
+                4.9 rating
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-primary-foreground/92 backdrop-blur-sm">
+                <BadgeDollarSign className="h-4 w-4 text-primary" />
+                From $25 / trip
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-primary-foreground/92 backdrop-blur-sm">
+                <Clock3 className="h-4 w-4 text-primary" />
+                Available 24/7
+              </div>
+            </motion.div>
 
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
@@ -57,17 +79,35 @@ const HeroSection = () => {
             >
               <button
                 onClick={scrollToBooking}
-                className="inline-flex items-center justify-center rounded-full bg-gradient-blue px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-blue transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-blue px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-blue transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
               >
-                Book Now
+                Book a ride
+                <ArrowRight className="h-4 w-4" />
               </button>
-              <Link
-                to="/admin"
-                className="border-2 border-primary-foreground/20 text-primary-foreground font-semibold px-8 py-3.5 rounded-full text-base hover:border-primary-foreground/40 hover:bg-primary-foreground/5 transition-all duration-300"
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/20 text-primary-foreground font-semibold px-8 py-3.5 rounded-full text-base hover:border-primary-foreground/40 hover:bg-primary-foreground/5 transition-all duration-300"
               >
-                Admin Panel
-              </Link>
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp us
+              </a>
             </motion.div>
+
+            <motion.p
+              className="mt-6 text-sm md:text-base text-primary-foreground/70"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.48, duration: 0.55 }}
+            >
+              Call anytime:{" "}
+              <a href={`tel:${phoneNumber}`} className="font-semibold text-primary-foreground underline-offset-4 hover:underline hover:text-primary">
+                070 729 0144
+              </a>
+              <span className="mx-3 text-primary-foreground/30">•</span>
+              Airport pickups, tours, and transfers across the island.
+            </motion.p>
 
             <motion.div
               className="mt-20"
@@ -87,15 +127,16 @@ const HeroSection = () => {
           >
             <div className="absolute -inset-4 rounded-[2rem] bg-primary/15 blur-3xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-white/40 bg-white shadow-2xl">
-                <div className="relative px-3 pb-3 pt-3 md:px-4 md:pb-4 md:pt-4 h-64 md:h-80 flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100">
-                  <img
-                    src={heroBg}
-                    alt="Premium travel in Sri Lanka"
-                    width={1280}
-                    height={960}
-                    className="w-full h-full object-cover object-center rounded-xl"
-                  />
-                </div>
+              <div className="relative px-3 pb-3 pt-3 md:px-4 md:pb-4 md:pt-4 h-[22rem] md:h-[30rem] flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100">
+                <img
+                  src={heroBg}
+                  alt="Premium travel in Sri Lanka"
+                  width={1280}
+                  height={960}
+                  className="w-full h-full object-cover object-center rounded-xl"
+                />
+                <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-t from-foreground/20 via-transparent to-transparent" />
+              </div>
               <div className="absolute left-3 top-3 flex flex-col gap-2 md:left-4 md:top-4">
                 <div className="inline-flex items-center gap-2 rounded-full bg-background/95 px-3 py-1.5 text-xs md:text-sm font-semibold text-foreground shadow-lg backdrop-blur-sm">
                   <MapPin className="h-3.5 w-3.5 md:h-4 md:w-4 text-primary flex-shrink-0" />
@@ -119,10 +160,10 @@ const HeroSection = () => {
                 </div>
                 <div className="rounded-xl border border-primary-foreground/20 bg-foreground p-3 md:p-4 shadow-lg">
                   <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.15em] text-primary">
-                    Available 24/7
+                    From $25 / trip
                   </p>
                   <p className="mt-2 text-xs md:text-sm text-primary-foreground/90 font-medium leading-snug">
-                    Airport pickups, tours, transfers.
+                    Airport pickups, tours, and transfers.
                   </p>
                 </div>
               </div>
