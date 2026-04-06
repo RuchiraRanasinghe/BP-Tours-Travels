@@ -6,7 +6,7 @@ import BookingForm from "@/components/BookingForm";
 import AirportTransferSection from "@/components/AirportTransferSection";
 import TourPackagesSection from "@/components/TourPackagesSection";
 import RatesSection from "@/components/RatesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import ReviewsSection from "@/components/ReviewsSection";
 import AboutSection from "@/components/AboutSection";
 import InquirySection from "@/components/InquirySection";
 import ServiceAreaMapSection from "@/components/ServiceAreaMapSection";
@@ -25,7 +25,7 @@ const Index = () => {
       <AirportTransferSection />
       <TourPackagesSection />
       <RatesSection />
-      <TestimonialsSection />
+      <ReviewsSection />
       <AboutSection />
       <InquirySection />
       <ServiceAreaMapSection />
