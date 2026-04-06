@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowRight, BadgeDollarSign, Clock3, MapPin, MessageCircle, ShieldCheck, Sparkles, Star } from "lucide-react";
+import { ArrowDown, ArrowRight, MapPin, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroMainBg from "@/assets/Gemini_Generated_Image_k6w2u2k6w2u2k6w2.png";
 
@@ -41,38 +41,8 @@ const HeroSection = () => {
               <span className="text-gradient-hero">across Sri Lanka</span>
             </motion.h1>
 
-            <motion.p
-              className="max-w-xl mx-auto lg:mx-0 mb-8 rounded-2xl border border-white/12 bg-black/25 px-5 py-4 text-lg md:text-xl leading-relaxed text-white/95 shadow-lg backdrop-blur-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.25, duration: 0.6 }}
-            >
-              Your trusted travel partner across the island with clean cars,
-              friendly drivers, scenic routes, and fast airport pickups.
-            </motion.p>
-
             <motion.div
-              className="flex flex-wrap justify-center lg:justify-start gap-3 mb-10"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.32, duration: 0.55 }}
-            >
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/18 bg-slate-950/35 px-4 py-2 text-sm font-semibold text-slate-50 shadow-[0_12px_30px_rgba(0,0,0,0.16)] backdrop-blur-md">
-                <Star className="h-4 w-4 fill-amber-300 text-amber-300" />
-                4.9 rating
-              </div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/18 bg-slate-950/35 px-4 py-2 text-sm font-semibold text-slate-50 shadow-[0_12px_30px_rgba(0,0,0,0.16)] backdrop-blur-md">
-                <BadgeDollarSign className="h-4 w-4 text-sky-300" />
-                From $25 / trip
-              </div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/18 bg-slate-950/35 px-4 py-2 text-sm font-semibold text-slate-50 shadow-[0_12px_30px_rgba(0,0,0,0.16)] backdrop-blur-md">
-                <Clock3 className="h-4 w-4 text-emerald-300" />
-                Available 24/7
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
+              className="mt-3 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
