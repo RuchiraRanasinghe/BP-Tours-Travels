@@ -57,16 +57,16 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.32, duration: 0.55 }}
             >
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-primary-foreground/92 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/18 bg-slate-950/35 px-4 py-2 text-sm font-semibold text-slate-50 shadow-[0_12px_30px_rgba(0,0,0,0.16)] backdrop-blur-md">
                 <Star className="h-4 w-4 fill-amber-300 text-amber-300" />
                 4.9 rating
               </div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-primary-foreground/92 backdrop-blur-sm">
-                <BadgeDollarSign className="h-4 w-4 text-primary" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/18 bg-slate-950/35 px-4 py-2 text-sm font-semibold text-slate-50 shadow-[0_12px_30px_rgba(0,0,0,0.16)] backdrop-blur-md">
+                <BadgeDollarSign className="h-4 w-4 text-sky-300" />
                 From $25 / trip
               </div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-primary-foreground/92 backdrop-blur-sm">
-                <Clock3 className="h-4 w-4 text-primary" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/18 bg-slate-950/35 px-4 py-2 text-sm font-semibold text-slate-50 shadow-[0_12px_30px_rgba(0,0,0,0.16)] backdrop-blur-md">
+                <Clock3 className="h-4 w-4 text-emerald-300" />
                 Available 24/7
               </div>
             </motion.div>
