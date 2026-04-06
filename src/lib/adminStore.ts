@@ -61,6 +61,14 @@ const defaultData: AdminData = {
       startingPrice: "LKR 36,500",
       itinerary: "Day 1: Bentota river safari and beach sunset. Day 2: Galle fort walk and Hikkaduwa marine stop.",
     },
+    {
+      id: "pkg-3",
+      name: "Badulla Mountain Retreat",
+      duration: "2 Days / 1 Night",
+      destinations: "Badulla, Ella, Demodara",
+      startingPrice: "LKR 39,500",
+      itinerary: "Day 1: Scenic drive to Badulla with waterfall stops and Ella sightseeing. Day 2: Nine Arches Bridge, Demodara Loop, and return journey.",
+    },
   ],
   rates: [
     { id: "rate-1", vehicleType: "Car", airportRate: "LKR 7,500", dayRate100km: "LKR 11,500", extraKmRate: "LKR 120" },
@@ -89,6 +97,15 @@ const notifyStoreChanged = () => {
   window.dispatchEvent(new Event("bp-admin-store-updated"));
 };
 
+const mergePackages = (packages: TourPackage[] | undefined) => {
+  const currentPackages = packages ?? [];
+  const missingPackages = defaultData.packages.filter(
+    (defaultPackage) => !currentPackages.some((pkg) => pkg.id === defaultPackage.id),
+  );
+
+  return [...currentPackages, ...missingPackages];
+};
+
 export const readAdminData = (): AdminData => {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -98,8 +115,21 @@ export const readAdminData = (): AdminData => {
     }
 
     const parsed = JSON.parse(raw) as Partial<AdminData>;
+    const packages = mergePackages(parsed.packages);
+
+    if (!parsed.packages || packages.length !== parsed.packages.length) {
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({
+          ...defaultData,
+          ...parsed,
+          packages,
+        }),
+      );
+    }
+
     return {
-      packages: parsed.packages ?? defaultData.packages,
+      packages,
       rates: parsed.rates ?? defaultData.rates,
       testimonials: parsed.testimonials ?? defaultData.testimonials,
       inquiries: parsed.inquiries ?? defaultData.inquiries,
