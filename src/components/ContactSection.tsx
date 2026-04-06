@@ -25,7 +25,7 @@ const ContactSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           <motion.a
             href="tel:+94707290144"
-            className="bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 group hover:scale-105"
+            className="w-full h-full bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 group hover:scale-105 flex flex-col items-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
@@ -41,7 +41,7 @@ const ContactSection = () => {
 
           <motion.a
             href="tel:+94771739144"
-            className="bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 group hover:scale-105"
+            className="w-full h-full bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 group hover:scale-105 flex flex-col items-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
@@ -57,7 +57,7 @@ const ContactSection = () => {
 
           <motion.a
             href="mailto:bandarapremathilaka.tours@gmail.com"
-            className="bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 group hover:scale-105"
+            className="w-full h-full bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 group hover:scale-105 flex flex-col items-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
@@ -68,7 +68,7 @@ const ContactSection = () => {
               <Mail className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
             </div>
             <p className="font-semibold text-foreground text-lg">Email</p>
-            <p className="text-muted-foreground text-sm mt-1">bandarapremathilaka.tours@gmail.com</p>
+            <p className="text-muted-foreground text-sm mt-1 break-all leading-relaxed">bandarapremathilaka.tours@gmail.com</p>
           </motion.a>
         </div>
 

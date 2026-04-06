@@ -77,7 +77,7 @@ const MegaMenuItem = ({ label, sections, scrolled }: MegaMenuItemProps) => {
                             {item.label}
                           </p>
                           {item.description && (
-                            <p className="text-xs text-muted-foreground group-hover/item:text-muted-foreground/80 mt-0.5">
+                            <p className="text-xs text-muted-foreground group-hover/item:text-muted-foreground/80 mt-0.5 break-all leading-relaxed">
                               {item.description}
                             </p>
                           )}
