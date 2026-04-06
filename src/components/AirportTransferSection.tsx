@@ -62,7 +62,7 @@ const AirportTransferSection = () => {
   };
 
   return (
-    <section id="corporate-transport" className="py-24 md:py-32 bg-background">
+    <section id="airport-transfer" className="py-24 md:py-32 bg-background">
       <div className="container px-6">
         <motion.div
           className="text-center mb-12"
@@ -78,6 +78,7 @@ const AirportTransferSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
           <motion.form
+            id="airport-to-hotel-form"
             onSubmit={onArrivalSubmit}
             className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-card"
             initial="hidden"
@@ -145,6 +146,7 @@ const AirportTransferSection = () => {
           </motion.form>
 
           <motion.form
+            id="hotel-to-airport-form"
             onSubmit={onDepartureSubmit}
             className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-card"
             initial="hidden"
