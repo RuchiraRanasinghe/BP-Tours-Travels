@@ -188,6 +188,13 @@ const Navbar = () => {
               ⭐ Saved Places
             </a>
             <a
+              href="#payment-methods"
+              onClick={() => setOpen(false)}
+              className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"
+            >
+              💳 Payment Methods
+            </a>
+            <a
               href="#referral"
               onClick={() => setOpen(false)}
               className="block py-2.5 text-foreground font-medium hover:text-primary transition-colors"

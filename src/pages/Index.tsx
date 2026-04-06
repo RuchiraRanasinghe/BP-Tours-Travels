@@ -10,6 +10,7 @@ import MeetGreetSection from "@/components/MeetGreetSection";
 import BookingSection from "@/components/BookingSection";
 import PricingSection from "@/components/PricingSection";
 import FleetSection from "@/components/FleetSection";
+import PaymentSection from "@/components/PaymentSection";
 import TourPackagesSection from "@/components/TourPackagesSection";
 import RatesSection from "@/components/RatesSection";
 import TrackingSection from "@/components/TrackingSection";
@@ -47,6 +48,9 @@ const Index = () => {
       {/* Vehicles Section */}
       <VehiclesSection />
       <FleetSection />
+      
+      {/* Payment Section */}
+      <PaymentSection />
       
       {/* Tracking Section */}
       <TrackingSection />
