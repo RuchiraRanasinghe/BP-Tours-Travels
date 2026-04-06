@@ -115,6 +115,17 @@ const AirportTransferSection = () => {
           <span id="airport-to-hotel-form" className="block h-0" aria-hidden="true" />
           <span id="hotel-to-airport-form" className="block h-0" aria-hidden="true" />
 
+          <div className="mb-4">
+            <p className="text-xs font-semibold tracking-[0.12em] uppercase text-primary">Selected Transfer</p>
+            <h3 className="text-xl md:text-2xl font-display font-semibold text-foreground mt-1">
+              {isAirportToHotel ? "Arrival Transfer" : "Departure Transfer"}
+            </h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              {isAirportToHotel ? "Airport -> Hotel" : "Hotel -> Airport"}
+            </p>
+            <p className="text-xs text-muted-foreground/90 mt-2">Hint: Click the swap arrow to switch transfer direction.</p>
+          </div>
+
           <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-3 mb-6">
             <button
               type="button"
