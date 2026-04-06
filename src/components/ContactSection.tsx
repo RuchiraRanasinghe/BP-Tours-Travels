@@ -22,7 +22,7 @@ const ContactSection = () => {
           <p className="text-muted-foreground text-lg">We're available 24/7 for your travel needs.</p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <motion.a
             href="tel:+94707290144"
             className="w-full h-full bg-card rounded-2xl border border-border p-8 text-center shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 group hover:scale-105 flex flex-col items-center"
@@ -68,7 +68,7 @@ const ContactSection = () => {
               <Mail className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
             </div>
             <p className="font-semibold text-foreground text-lg">Email</p>
-            <p className="text-muted-foreground text-sm mt-1 break-all leading-relaxed">bandarapremathilaka.tours@gmail.com</p>
+            <p className="text-muted-foreground text-xs mt-1 break-words leading-relaxed">bandarapremathilaka.tours@gmail.com</p>
           </motion.a>
         </div>
 
