@@ -18,8 +18,8 @@ const HeroSection = () => {
         <HeroCarousel />
       </div>
 
-      {/* Booking Widget - Positioned on left center */}
-      <div className="absolute left-4 md:left-8 lg:left-12 top-1/2 -translate-y-1/2 z-20 hidden lg:block">
+      {/* Booking Widget - Positioned on right corner */}
+      <div className="absolute right-4 md:right-8 lg:right-12 top-1/2 -translate-y-1/2 z-20 hidden lg:block">
         <HeroBookingWidget />
       </div>
 
