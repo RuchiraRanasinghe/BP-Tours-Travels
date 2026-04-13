@@ -105,18 +105,25 @@ const extractDominantColor = (imageSrc: string): Promise<HSL> => {
 
 /**
  * Hook to extract and apply dominant color from an image to CSS variables
- * Updates the --primary, --primary-foreground, and other related color variables
+ * Can apply to a specific element (local) or globally
+ * @param imageSrc - Image source URL
+ * @param enabled - Whether to enable color extraction
+ * @param elementId - Optional element ID to apply colors locally (if not provided, applies globally)
  */
-export const useColorExtraction = (imageSrc: string, enabled = true) => {
+export const useColorExtraction = (imageSrc: string, enabled = true, elementId?: string) => {
   useEffect(() => {
     if (!enabled || !imageSrc) return;
 
     const applyDynamicColor = async () => {
       const hsl = await extractDominantColor(imageSrc);
 
+      // Get target element (globally or specific element)
+      const target = elementId ? document.getElementById(elementId) : document.documentElement;
+      
+      if (!target) return;
+
       // Update primary color CSS variable
-      const root = document.documentElement;
-      root.style.setProperty('--primary', `${hsl.h} ${hsl.s}% ${hsl.l}%`);
+      target.style.setProperty('--primary', `${hsl.h} ${hsl.s}% ${hsl.l}%`);
 
       // Update gradient colors for better visual harmony
       // Lighter version for gradients
@@ -125,7 +132,7 @@ export const useColorExtraction = (imageSrc: string, enabled = true) => {
         s: Math.max(hsl.s - 15, 0),
         l: Math.min(hsl.l + 15, 100),
       };
-      root.style.setProperty('--blue-light', `${lighter.h} ${lighter.s}% ${lighter.l}%`);
+      target.style.setProperty('--blue-light', `${lighter.h} ${lighter.s}% ${lighter.l}%`);
 
       // Darker version for depth
       const darker = {
@@ -133,18 +140,18 @@ export const useColorExtraction = (imageSrc: string, enabled = true) => {
         s: Math.min(hsl.s + 10, 100),
         l: Math.max(hsl.l - 20, 0),
       };
-      root.style.setProperty('--blue-dark', `${darker.h} ${darker.s}% ${darker.l}%`);
+      target.style.setProperty('--blue-dark', `${darker.h} ${darker.s}% ${darker.l}%`);
 
       // Update accent color to complement the primary
       const accentHue = (hsl.h + 120) % 360; // Complementary color (120° away)
-      root.style.setProperty('--accent', `${accentHue} ${Math.min(hsl.s + 15, 100)}% 60%`);
+      target.style.setProperty('--accent', `${accentHue} ${Math.min(hsl.s + 15, 100)}% 60%`);
 
       // Update ring color
-      root.style.setProperty('--ring', `${hsl.h} ${hsl.s}% ${hsl.l}%`);
+      target.style.setProperty('--ring', `${hsl.h} ${hsl.s}% ${hsl.l}%`);
     };
 
     applyDynamicColor();
-  }, [imageSrc, enabled]);
+  }, [imageSrc, enabled, elementId]);
 };
 
 export default useColorExtraction;

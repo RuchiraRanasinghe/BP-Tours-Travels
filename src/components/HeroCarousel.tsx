@@ -40,8 +40,8 @@ const HeroCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
 
-  // Color extraction disabled - colors no longer change automatically across the website
-  // useColorExtraction(images[currentIndex].src);
+  // Apply color extraction only to the hero section, not globally
+  useColorExtraction(images[currentIndex].src, true, "hero-carousel");
 
   useEffect(() => {
     if (!autoplay) return;
@@ -73,6 +73,7 @@ const HeroCarousel = () => {
 
   return (
     <div
+      id="hero-carousel"
       className="relative w-full h-full overflow-hidden rounded-none"
       onMouseEnter={() => setAutoplay(false)}
       onMouseLeave={() => setAutoplay(true)}
