@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowRight, BadgeDollarSign, Clock3, MessageCircle, Star } from "lucide-react";
-import heroMainBg from "@/assets/chathuraanuradha-tower-7314495_1920.jpg";
+import HeroBookingWidget from "./HeroBookingWidget";
+import HeroCarousel from "./HeroCarousel";
 
 const HeroSection = () => {
   const whatsappUrl = "https://wa.me/94707290144";
@@ -12,9 +13,14 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={heroMainBg} alt="Airport taxi service in Sri Lanka" className="w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/75 via-foreground/55 to-foreground/85" />
+      {/* Hero Carousel Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <HeroCarousel />
+      </div>
+
+      {/* Booking Widget - Positioned on right corner */}
+      <div className="absolute right-4 md:right-8 lg:right-12 top-1/2 -translate-y-1/2 z-20 hidden lg:block">
+        <HeroBookingWidget />
       </div>
 
       <div className="relative z-10 container px-6 py-24 md:py-28">
