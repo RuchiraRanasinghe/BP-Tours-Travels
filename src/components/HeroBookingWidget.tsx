@@ -23,6 +23,19 @@ const HeroBookingWidget = () => {
   const dateRef = useRef<HTMLInputElement>(null);
   const timeRef = useRef<HTMLInputElement>(null);
 
+  // Style for select options
+  const selectOptionStyle = `
+    select option {
+      background-color: #0f172a;
+      color: #e2e8f0;
+    }
+    select option:checked {
+      background: linear-gradient(#0f172a, #0f172a);
+      background-color: #0f172a !important;
+      color: #fff !important;
+    }
+  `;
+
   const today = new Date();
   const minDate = toDateInputValue(today);
   const fourHoursFromNow = new Date(Date.now() + 4 * 60 * 60 * 1000);
@@ -51,19 +64,21 @@ const HeroBookingWidget = () => {
   };
 
   const inputClass =
-    "w-full px-3 py-2.5 rounded-lg border border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-sm backdrop-blur-sm";
+    "w-full px-3 py-2.5 rounded-lg border border-slate-700 bg-slate-900/30 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-sm backdrop-blur-sm";
   const labelClass = "block text-xs font-semibold text-white/80 mb-1.5 uppercase tracking-wide";
 
   return (
-    <motion.form
-      ref={formRef}
-      onSubmit={handleSubmit}
-      className="w-full sm:w-96 bg-slate-950/80 backdrop-blur-lg rounded-2xl border border-white/10 p-6 md:p-7 shadow-2xl relative"
-      initial={{ opacity: 0, x: 50, y: 0 }}
-      animate={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ delay: 0.6, duration: 0.7 }}
-      whileHover={{ boxShadow: "0 25px 50px rgba(0, 0, 0, 0.4)" }}
-    >
+    <>
+      <style>{selectOptionStyle}</style>
+      <motion.form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="w-full sm:w-96 bg-slate-950/80 backdrop-blur-lg rounded-2xl border border-slate-800 p-6 md:p-7 shadow-2xl relative"
+        initial={{ opacity: 0, x: 50, y: 0 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.7 }}
+        whileHover={{ boxShadow: "0 25px 50px rgba(0, 0, 0, 0.4)" }}
+      >
       {/* Header */}
       <div className="mb-6">
         <motion.span
@@ -76,7 +91,7 @@ const HeroBookingWidget = () => {
           Easy Booking
         </motion.span>
         <motion.h3
-          className="text-xl md:text-2xl font-display font-bold text-white mb-1"
+          className="text-xl md:text-2xl font-display font-bold text-slate-100 mb-1"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.75 }}
@@ -84,7 +99,7 @@ const HeroBookingWidget = () => {
           Instant Quote
         </motion.h3>
         <motion.p
-          className="text-xs text-white/60"
+          className="text-xs text-slate-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
@@ -192,7 +207,8 @@ const HeroBookingWidget = () => {
         animate={{ width: "100%" }}
         transition={{ delay: 0.7, duration: 0.8 }}
       ></motion.div>
-    </motion.form>
+      </motion.form>
+    </>
   );
 };
 
