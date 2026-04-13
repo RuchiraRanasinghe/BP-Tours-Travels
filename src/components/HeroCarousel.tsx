@@ -40,8 +40,8 @@ const HeroCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
 
-  // Extract dominant color from current image
-  useColorExtraction(images[currentIndex].src);
+  // Color extraction disabled - colors no longer change automatically across the website
+  // useColorExtraction(images[currentIndex].src);
 
   useEffect(() => {
     if (!autoplay) return;
