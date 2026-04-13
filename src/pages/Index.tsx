@@ -1,23 +1,25 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import ImageShowcaseSection from "@/components/ImageShowcaseSection";
+import GallerySection from "@/components/GallerySection";
 import VehiclesSection from "@/components/VehiclesSection";
 import BookingForm from "@/components/BookingForm";
 import AirportTransferSection from "@/components/AirportTransferSection";
-import AirportPickupSection from "@/components/AirportPickupSection";
-import AirportDropSection from "@/components/AirportDropSection";
 import MeetGreetSection from "@/components/MeetGreetSection";
 import BookingSection from "@/components/BookingSection";
 import PricingSection from "@/components/PricingSection";
 import FleetSection from "@/components/FleetSection";
 import PaymentSection from "@/components/PaymentSection";
 import TourPackagesSection from "@/components/TourPackagesSection";
+import DestinationsSpotlightSection from "@/components/DestinationsSpotlightSection";
 import RatesSection from "@/components/RatesSection";
 import TrackingSection from "@/components/TrackingSection";
 import SupportSection from "@/components/SupportSection";
 import AccountSection from "@/components/AccountSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import AboutSection from "@/components/AboutSection";
+import WhySriLankaSection from "@/components/WhySriLankaSection";
 import InquirySection from "@/components/InquirySection";
 import ServiceAreaMapSection from "@/components/ServiceAreaMapSection";
 import ContactSection from "@/components/ContactSection";
@@ -31,10 +33,13 @@ const Index = () => {
       <HeroSection />
       <ServicesSection />
       
+      {/* Image Showcase */}
+      <ImageShowcaseSection />
+      
+      <GallerySection />
+      
       {/* Airport Services Section */}
       <AirportTransferSection />
-      <AirportPickupSection />
-      <AirportDropSection />
       <MeetGreetSection />
       
       {/* Local Transport Section */}
@@ -61,10 +66,14 @@ const Index = () => {
       {/* Account Section */}
       <AccountSection />
       
-      {/* Other Sections */}
+      {/* Tour Packages & Destinations */}
       <TourPackagesSection />
+      <DestinationsSpotlightSection />
+      
+      {/* Other Sections */}
       <ReviewsSection />
       <AboutSection />
+      <WhySriLankaSection />
       <InquirySection />
       <ServiceAreaMapSection />
       <ContactSection />

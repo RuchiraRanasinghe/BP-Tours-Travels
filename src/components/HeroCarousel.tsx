@@ -5,8 +5,6 @@ import { useColorExtraction } from "@/hooks/useColorExtraction";
 import GeminiImage from "@/assets/Gemini_Generated_Image_8ht2sf8ht2sf8ht2.png";
 import LotusImage from "@/assets/Lotus_Tower.jpg";
 import GalleImage from "@/assets/karuvadgraphy-galle-4818528_1920.jpg";
-import MirisaImage from "@/assets/pmarciciak-mirissa-3287053_1920.jpg";
-import TempleImage from "@/assets/musthaqsms-temple-204803_1920.jpg";
 
 const images = [
   {
@@ -24,16 +22,6 @@ const images = [
     title: "Historic Galle Fort",
     description: "UNESCO World Heritage site with stunning views",
   },
-  {
-    src: MirisaImage,
-    title: "Beautiful Mirissa Beach",
-    description: "Paradise coastline for whale watching",
-  },
-  {
-    src: TempleImage,
-    title: "Sacred Temples",
-    description: "Ancient spiritual landmarks across the island",
-  },
 ];
 
 const HeroCarousel = () => {
@@ -46,8 +34,8 @@ const HeroCarousel = () => {
   useEffect(() => {
     if (!autoplay) return;
 
-    // Keep first image (Gemini) for 5 seconds, others for 5.5 seconds
-    const delay = currentIndex === 0 ? 5000 : 5500;
+    // Autoplay interval for carousel
+    const delay = 5500;
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
