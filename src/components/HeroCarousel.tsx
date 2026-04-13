@@ -142,11 +142,6 @@ const HeroCarousel = () => {
           />
         ))}
       </div>
-
-      {/* Slide Counter */}
-      <div className="absolute top-6 right-6 text-white/80 text-sm font-semibold z-20 bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
-        {currentIndex + 1} / {images.length}
-      </div>
     </div>
   );
 };
