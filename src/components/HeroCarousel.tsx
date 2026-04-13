@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useColorExtraction } from "@/hooks/useColorExtraction";
 import GeminiImage from "@/assets/Gemini_Generated_Image_8ht2sf8ht2sf8ht2.png";
 import LotusImage from "@/assets/Lotus_Tower.jpg";
 import GalleImage from "@/assets/karuvadgraphy-galle-4818528_1920.jpg";
@@ -38,6 +39,9 @@ const images = [
 const HeroCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
+
+  // Extract dominant color from current image
+  useColorExtraction(images[currentIndex].src);
 
   useEffect(() => {
     if (!autoplay) return;
