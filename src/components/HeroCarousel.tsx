@@ -46,12 +46,15 @@ const HeroCarousel = () => {
   useEffect(() => {
     if (!autoplay) return;
 
+    // Keep first image (Gemini) for 5 seconds, others for 5.5 seconds
+    const delay = currentIndex === 0 ? 5000 : 5500;
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
+    }, delay);
 
     return () => clearInterval(interval);
-  }, [autoplay]);
+  }, [autoplay, currentIndex]);
 
   const goToPrevious = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
@@ -80,7 +83,7 @@ const HeroCarousel = () => {
           initial={false}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: currentIndex === 0 ? 0.8 : 1.2, ease: "easeInOut" }}
           className="absolute inset-0"
         >
           <img
